@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BasicMessageResponseStickers } from "discord/models/components";
+import { BasicMessageResponseStickers } from "@speakeasy-sdks/discord/models/components";
 
 let value: BasicMessageResponseStickers = {
     id: "<value>",

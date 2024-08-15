@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ByNWeekdayResponse } from "discord/models/components";
+import { ByNWeekdayResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ByNWeekdayResponse = {
     n: 979587,

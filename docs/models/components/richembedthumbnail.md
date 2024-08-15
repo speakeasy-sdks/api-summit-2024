@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RichEmbedThumbnail } from "discord/models/components";
+import { RichEmbedThumbnail } from "@speakeasy-sdks/discord/models/components";
 
 let value: RichEmbedThumbnail = {};
 ```

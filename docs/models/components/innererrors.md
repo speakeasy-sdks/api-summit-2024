@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { InnerErrors } from "discord/models/components";
+import { InnerErrors } from "@speakeasy-sdks/discord/models/components";
 
 let value: InnerErrors = {
     errors: [

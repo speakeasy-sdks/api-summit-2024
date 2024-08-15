@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PrivateChannelResponse } from "discord/models/components";
+import { PrivateChannelResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: PrivateChannelResponse = {
     id: "<value>",

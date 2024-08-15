@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Security } from "discord/models/components";
+import { Security } from "@speakeasy-sdks/discord/models/components";
 
 let value: Security = {
     botToken: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateGuildChannelRequestPartial } from "discord/models/components";
+import { UpdateGuildChannelRequestPartial } from "@speakeasy-sdks/discord/models/components";
 
 let value: UpdateGuildChannelRequestPartial = {};
 ```

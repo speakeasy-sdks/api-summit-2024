@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GuildChannelResponse } from "discord/models/components";
+import { GuildChannelResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: GuildChannelResponse = {
     id: "<value>",

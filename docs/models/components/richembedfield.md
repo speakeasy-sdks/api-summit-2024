@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RichEmbedField } from "discord/models/components";
+import { RichEmbedField } from "@speakeasy-sdks/discord/models/components";
 
 let value: RichEmbedField = {
     name: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MessageCreateRequestNonce } from "discord/models/components";
+import { MessageCreateRequestNonce } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageCreateRequestNonce = "<value>";
 ```

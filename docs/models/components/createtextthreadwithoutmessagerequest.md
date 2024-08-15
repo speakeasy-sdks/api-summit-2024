@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateTextThreadWithoutMessageRequest } from "discord/models/components";
+import { CreateTextThreadWithoutMessageRequest } from "@speakeasy-sdks/discord/models/components";
 
 let value: CreateTextThreadWithoutMessageRequest = {
     name: "<value>",

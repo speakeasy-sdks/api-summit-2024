@@ -5,7 +5,7 @@
 ## Example Usage
 
 ```typescript
-import { DeleteChannelResponseBody } from "discord/models/operations";
+import { DeleteChannelResponseBody } from "@speakeasy-sdks/discord/models/operations";
 
 let value: DeleteChannelResponseBody = {
     id: "<value>",

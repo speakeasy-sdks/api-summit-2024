@@ -5,7 +5,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateChannelResponseBody } from "discord/models/operations";
+import { UpdateChannelResponseBody } from "@speakeasy-sdks/discord/models/operations";
 
 let value: UpdateChannelResponseBody = {
     id: "<value>",

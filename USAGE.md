@@ -1,6 +1,6 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
     botToken: "<YOUR_API_KEY_HERE>",
