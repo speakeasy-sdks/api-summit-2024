@@ -12,7 +12,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
   botToken: "<YOUR_API_KEY_HERE>",
@@ -36,8 +36,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { channelsGet } from "discord/funcs/channelsGet.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { channelsGet } from "@speakeasy-sdks/discord/funcs/channelsGet.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -88,7 +88,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
   botToken: "<YOUR_API_KEY_HERE>",
@@ -112,8 +112,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { channelsDelete } from "discord/funcs/channelsDelete.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { channelsDelete } from "@speakeasy-sdks/discord/funcs/channelsDelete.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -164,7 +164,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
   botToken: "<YOUR_API_KEY_HERE>",
@@ -189,8 +189,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { channelsUpdate } from "discord/funcs/channelsUpdate.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { channelsUpdate } from "@speakeasy-sdks/discord/funcs/channelsUpdate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

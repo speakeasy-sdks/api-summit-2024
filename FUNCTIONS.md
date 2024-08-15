@@ -19,9 +19,9 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { messagesGet } from "discord/funcs/messagesGet.js";
-import { SDKValidationError } from "discord/models/errors/sdkvalidationerror.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { messagesGet } from "@speakeasy-sdks/discord/funcs/messagesGet.js";
+import { SDKValidationError } from "@speakeasy-sdks/discord/models/errors/sdkvalidationerror.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

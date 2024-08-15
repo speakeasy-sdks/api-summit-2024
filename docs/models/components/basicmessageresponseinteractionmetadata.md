@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BasicMessageResponseInteractionMetadata } from "discord/models/components";
+import { BasicMessageResponseInteractionMetadata } from "@speakeasy-sdks/discord/models/components";
 
 let value: BasicMessageResponseInteractionMetadata = {
     id: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RecurrenceRuleResponse } from "discord/models/components";
+import { RecurrenceRuleResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: RecurrenceRuleResponse = {
     start: new Date("2022-11-06T22:57:15.343Z"),

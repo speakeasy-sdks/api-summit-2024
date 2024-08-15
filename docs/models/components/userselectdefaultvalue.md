@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UserSelectDefaultValue } from "discord/models/components";
+import { UserSelectDefaultValue } from "@speakeasy-sdks/discord/models/components";
 
 let value: UserSelectDefaultValue = {
     id: "<value>",

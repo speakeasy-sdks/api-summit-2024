@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { InviteStageInstanceResponse } from "discord/models/components";
+import { InviteStageInstanceResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: InviteStageInstanceResponse = {
     topic: "<value>",

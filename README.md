@@ -22,25 +22,25 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 ### NPM
 
 ```bash
-npm add discord
+npm add @speakeasy-sdks/discord
 ```
 
 ### PNPM
 
 ```bash
-pnpm add discord
+pnpm add @speakeasy-sdks/discord
 ```
 
 ### Bun
 
 ```bash
-bun add discord
+bun add @speakeasy-sdks/discord
 ```
 
 ### Yarn
 
 ```bash
-yarn add discord zod
+yarn add @speakeasy-sdks/discord zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -59,7 +59,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
     botToken: "<YOUR_API_KEY_HERE>",
@@ -145,7 +145,7 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
     botToken: "<YOUR_API_KEY_HERE>",
@@ -181,7 +181,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
     retryConfig: {
@@ -226,8 +226,8 @@ Validation errors can also occur when either method arguments or data returned f
 
 
 ```typescript
-import { Discord } from "discord";
-import { SDKValidationError } from "discord/models/errors";
+import { Discord } from "@speakeasy-sdks/discord";
+import { SDKValidationError } from "@speakeasy-sdks/discord/models/errors";
 
 const discord = new Discord({
     botToken: "<YOUR_API_KEY_HERE>",
@@ -280,7 +280,7 @@ You can override the default server globally by passing a server index to the `s
 | 0 | `https://discord.com/api/v10` | None |
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
     serverIdx: 0,
@@ -307,7 +307,7 @@ run();
 The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
     serverURL: "https://discord.com/api/v10",
@@ -347,8 +347,8 @@ custom header and a timeout to requests and how to use the `"requestError"` hook
 to log errors:
 
 ```typescript
-import { Discord } from "discord";
-import { HTTPClient } from "discord/lib/http";
+import { Discord } from "@speakeasy-sdks/discord";
+import { HTTPClient } from "@speakeasy-sdks/discord/lib/http";
 
 const httpClient = new HTTPClient({
   // fetcher takes a function that has the same signature as native `fetch`.
@@ -391,7 +391,7 @@ This SDK supports the following security scheme globally:
 
 To authenticate with the API the `botToken` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
     botToken: "<YOUR_API_KEY_HERE>",
@@ -421,7 +421,7 @@ To log HTTP requests and responses, you can pass a logger that matches `console`
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const sdk = new Discord({ debugLogger: console });
 ```

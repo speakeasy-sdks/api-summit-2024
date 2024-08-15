@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateThreadTagRequest } from "discord/models/components";
+import { UpdateThreadTagRequest } from "@speakeasy-sdks/discord/models/components";
 
 let value: UpdateThreadTagRequest = {
     name: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateThreadRequest } from "discord/models/operations";
+import { CreateThreadRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: CreateThreadRequest = {
     channelId: "<value>",

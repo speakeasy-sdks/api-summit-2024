@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ScheduledEventUserResponse } from "discord/models/components";
+import { ScheduledEventUserResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ScheduledEventUserResponse = {
     guildScheduledEventId: "<value>",

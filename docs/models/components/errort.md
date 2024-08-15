@@ -5,7 +5,7 @@ A single error, either for an API response or a specific field.
 ## Example Usage
 
 ```typescript
-import { ErrorT } from "discord/models/components";
+import { ErrorT } from "@speakeasy-sdks/discord/models/components";
 
 let value: ErrorT = {
     code: 509624,

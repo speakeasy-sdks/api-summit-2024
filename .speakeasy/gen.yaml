@@ -15,7 +15,7 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: false
 typescript:
-  version: "1"
+  version: "1.1"
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -38,7 +38,7 @@ typescript:
   methodArguments: require-security-and-request
   moduleFormat: commonjs
   outputModelSuffix: output
-  packageName: "@speakeasy-sdks/discord"
+  packageName: '@speakeasy-sdks/discord'
   responseFormat: flat
   templateVersion: v2
   useIndexModules: true

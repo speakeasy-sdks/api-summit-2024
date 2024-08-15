@@ -14,7 +14,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
   botToken: "<YOUR_API_KEY_HERE>",
@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { messagesGet } from "discord/funcs/messagesGet.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { messagesGet } from "@speakeasy-sdks/discord/funcs/messagesGet.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -92,7 +92,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
   botToken: "<YOUR_API_KEY_HERE>",
@@ -116,8 +116,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { messagesDelete } from "discord/funcs/messagesDelete.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { messagesDelete } from "@speakeasy-sdks/discord/funcs/messagesDelete.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -168,7 +168,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
   botToken: "<YOUR_API_KEY_HERE>",
@@ -194,8 +194,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { messagesUpdate } from "discord/funcs/messagesUpdate.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { messagesUpdate } from "@speakeasy-sdks/discord/funcs/messagesUpdate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -248,7 +248,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
   botToken: "<YOUR_API_KEY_HERE>",
@@ -272,8 +272,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { messagesList } from "discord/funcs/messagesList.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { messagesList } from "@speakeasy-sdks/discord/funcs/messagesList.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -324,7 +324,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "discord";
+import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
   botToken: "<YOUR_API_KEY_HERE>",
@@ -349,8 +349,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "discord/core.js";
-import { messagesCreate } from "discord/funcs/messagesCreate.js";
+import { DiscordCore } from "@speakeasy-sdks/discord/core.js";
+import { messagesCreate } from "@speakeasy-sdks/discord/funcs/messagesCreate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

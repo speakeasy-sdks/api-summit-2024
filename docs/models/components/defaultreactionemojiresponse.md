@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DefaultReactionEmojiResponse } from "discord/models/components";
+import { DefaultReactionEmojiResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: DefaultReactionEmojiResponse = {};
 ```

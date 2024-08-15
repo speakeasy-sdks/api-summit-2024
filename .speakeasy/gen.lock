@@ -5,8 +5,8 @@ management:
   docVersion: "10"
   speakeasyVersion: 1.369.0
   generationVersion: 2.399.0
-  releaseVersion: "1"
-  configChecksum: 3cda4b7e6415538553a9c79f81b7f9ac
+  releaseVersion: "1.1"
+  configChecksum: 561612e2773fc24631fb111bb064c3a9
   repoURL: https://github.com/speakeasy-sdks/api-summit-2024.git
   installationURL: https://github.com/speakeasy-sdks/api-summit-2024
   published: true

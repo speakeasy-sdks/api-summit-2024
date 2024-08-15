@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateForumThreadRequest } from "discord/models/components";
+import { CreateForumThreadRequest } from "@speakeasy-sdks/discord/models/components";
 
 let value: CreateForumThreadRequest = {
     name: "<value>",

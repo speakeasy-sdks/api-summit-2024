@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ChannelPermissionOverwriteResponse } from "discord/models/components";
+import { ChannelPermissionOverwriteResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ChannelPermissionOverwriteResponse = {
     id: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ThreadMetadataResponse } from "discord/models/components";
+import { ThreadMetadataResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ThreadMetadataResponse = {
     archived: false,

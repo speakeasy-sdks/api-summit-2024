@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MessageComponentMentionableSelectResponse } from "discord/models/components";
+import { MessageComponentMentionableSelectResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageComponentMentionableSelectResponse = {
     id: 244425,

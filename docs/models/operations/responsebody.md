@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBody } from "discord/models/operations";
+import { ResponseBody } from "@speakeasy-sdks/discord/models/operations";
 
 let value: ResponseBody = {
     code: "<value>",
