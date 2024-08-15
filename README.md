@@ -22,25 +22,25 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 ### NPM
 
 ```bash
-npm add https://github.com/speakeasy-sdks/api-summit-2024
+npm add discord
 ```
 
 ### PNPM
 
 ```bash
-pnpm add https://github.com/speakeasy-sdks/api-summit-2024
+pnpm add discord
 ```
 
 ### Bun
 
 ```bash
-bun add https://github.com/speakeasy-sdks/api-summit-2024
+bun add discord
 ```
 
 ### Yarn
 
 ```bash
-yarn add https://github.com/speakeasy-sdks/api-summit-2024 zod
+yarn add discord zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
