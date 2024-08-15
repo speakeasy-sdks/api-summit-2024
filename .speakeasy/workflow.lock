@@ -1,0 +1,29 @@
+speakeasyVersion: 1.369.0
+sources:
+    discord-OAS:
+        sourceNamespace: discord-oas
+        sourceRevisionDigest: sha256:554e2cb7658db8b832f4ecd5c37f7c450ff31ec5de2932fd8715b894ac0bc19e
+        sourceBlobDigest: sha256:3cae0096bea087e314eccc8bdbaa8138b4d150df85bec1a5df53e106b5911bb6
+        tags:
+            - latest
+targets:
+    discord:
+        source: discord-OAS
+        sourceNamespace: discord-oas
+        sourceRevisionDigest: sha256:554e2cb7658db8b832f4ecd5c37f7c450ff31ec5de2932fd8715b894ac0bc19e
+        sourceBlobDigest: sha256:3cae0096bea087e314eccc8bdbaa8138b4d150df85bec1a5df53e106b5911bb6
+        outLocation: /Users/ndimares/speakeasy/demos/api-summit-2024
+workflow:
+    workflowVersion: 1.0.0
+    sources:
+        discord-OAS:
+            inputs:
+                - location: https://raw.githubusercontent.com/speakeasy-api/example-specs/main/discord.yaml
+            overlays:
+                - location: overlay.yaml
+            registry:
+                location: registry.speakeasyapi.dev/nolan-sdk-test/nolan-sdk-test/discord-oas
+    targets:
+        discord:
+            target: typescript
+            source: discord-OAS

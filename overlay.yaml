@@ -1,0 +1,93 @@
+overlay: 1.0.0
+info:
+  title: Speakeasy Improvements - Discord HTTP API (Preview)
+  version: 0.0.0
+actions:
+  - target: $["paths"]["/channels/{channel_id}/messages/{message_id}"]["get"]
+    update:
+      x-speakeasy-group: messages
+      x-speakeasy-name-override: get
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.get_message()
+      after: sdk.messages.get()
+  - target: $["paths"]["/channels/{channel_id}/messages/{message_id}"]["delete"]
+    update:
+      x-speakeasy-group: messages
+      x-speakeasy-name-override: delete
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.delete_message()
+      after: sdk.messages.delete()
+  - target: $["paths"]["/channels/{channel_id}/messages/{message_id}"]["patch"]
+    update:
+      x-speakeasy-group: messages
+      x-speakeasy-name-override: update
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.update_message()
+      after: sdk.messages.update()
+  - target: $["paths"]["/channels/{channel_id}/messages"]["get"]
+    update:
+      x-speakeasy-group: messages
+      x-speakeasy-name-override: list
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.list_messages()
+      after: sdk.messages.list()
+  - target: $["paths"]["/channels/{channel_id}/messages"]["post"]
+    update:
+      x-speakeasy-group: messages
+      x-speakeasy-name-override: create
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.create_message()
+      after: sdk.messages.create()
+  - target: $["paths"]["/channels/{channel_id}/invites"]["get"]
+    update:
+      x-speakeasy-group: channelInvites
+      x-speakeasy-name-override: list
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.list_channel_invites()
+      after: sdk.channelInvites.list()
+  - target: $["paths"]["/channels/{channel_id}/invites"]["post"]
+    update:
+      x-speakeasy-group: channelInvites
+      x-speakeasy-name-override: create
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.create_channel_invite()
+      after: sdk.channelInvites.create()
+  - target: $["paths"]["/channels/{channel_id}/threads"]["post"]
+    update:
+      x-speakeasy-group: threads
+      x-speakeasy-name-override: create
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.create_thread()
+      after: sdk.threads.create()
+  - target: $["paths"]["/channels/{channel_id}"]["get"]
+    update:
+      x-speakeasy-group: channels
+      x-speakeasy-name-override: get
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.get_channel()
+      after: sdk.channels.get()
+  - target: $["paths"]["/channels/{channel_id}"]["delete"]
+    update:
+      x-speakeasy-group: channels
+      x-speakeasy-name-override: delete
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.delete_channel()
+      after: sdk.channels.delete()
+  - target: $["paths"]["/channels/{channel_id}"]["patch"]
+    update:
+      x-speakeasy-group: channels
+      x-speakeasy-name-override: update
+    x-speakeasy-modification:
+      type: method-name
+      before: sdk.<no_group>.update_channel()
+      after: sdk.channels.update()

@@ -1,0 +1,13 @@
+workflowVersion: 1.0.0
+sources:
+    discord-OAS:
+        inputs:
+            - location: https://raw.githubusercontent.com/speakeasy-api/example-specs/main/discord.yaml
+        overlays:
+            - location: overlay.yaml
+        registry:
+            location: registry.speakeasyapi.dev/nolan-sdk-test/nolan-sdk-test/discord-oas
+targets:
+    discord:
+        target: typescript
+        source: discord-OAS
