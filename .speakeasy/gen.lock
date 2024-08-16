@@ -3,10 +3,10 @@ id: c1ca526f-aa0e-4e69-8de4-80c2e3eaabd4
 management:
   docChecksum: 9922bc49f897a6971cd384c3440969f1
   docVersion: "10"
-  speakeasyVersion: 1.369.0
+  speakeasyVersion: 1.372.0
   generationVersion: 2.399.0
-  releaseVersion: "1.1"
-  configChecksum: 561612e2773fc24631fb111bb064c3a9
+  releaseVersion: 1.1.1
+  configChecksum: deb0d20940de4331e038fe12a171da0f
   repoURL: https://github.com/speakeasy-sdks/api-summit-2024.git
   installationURL: https://github.com/speakeasy-sdks/api-summit-2024
   published: true
