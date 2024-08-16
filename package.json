@@ -1,6 +1,6 @@
 {
   "name": "@speakeasy-sdks/discord",
-  "version": "1.1",
+  "version": "1.1.1",
   "author": "Speakeasy",
   "main": "./index.js",
   "sideEffects": false,
