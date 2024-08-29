@@ -3,18 +3,18 @@ id: c1ca526f-aa0e-4e69-8de4-80c2e3eaabd4
 management:
   docChecksum: 9922bc49f897a6971cd384c3440969f1
   docVersion: "10"
-  speakeasyVersion: 1.372.0
-  generationVersion: 2.399.0
-  releaseVersion: 1.1.1
-  configChecksum: deb0d20940de4331e038fe12a171da0f
+  speakeasyVersion: 1.382.0
+  generationVersion: 2.404.11
+  releaseVersion: 1.2.0
+  configChecksum: ad1e15de86cf3fbf3eeea308598af96e
   repoURL: https://github.com/speakeasy-sdks/api-summit-2024.git
   installationURL: https://github.com/speakeasy-sdks/api-summit-2024
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.8
-    core: 3.13.2
+    constsAndDefaults: 0.1.11
+    core: 3.14.1
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.1.1

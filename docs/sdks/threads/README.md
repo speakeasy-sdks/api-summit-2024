@@ -1,6 +1,8 @@
 # Threads
 (*threads*)
 
+## Overview
+
 ### Available Operations
 
 * [create](#create)
@@ -19,10 +21,10 @@ const discord = new Discord({
 async function run() {
   const result = await discord.threads.create({
     channelId: "<value>",
-  requestBody:     {
-        name: "<value>",
-        message: {},
-      },
+    requestBody: {
+      name: "<value>",
+      message: {},
+    },
   });
 
   // Handle the result
@@ -31,7 +33,6 @@ async function run() {
 
 run();
 ```
-
 
 ### Standalone function
 
@@ -50,9 +51,9 @@ const discord = new DiscordCore({
 async function run() {
   const res = await threadsCreate(discord, {
     channelId: "<value>",
-  requestBody:     {
-        name: "<value>",
-      },
+    requestBody: {
+      name: "<value>",
+    },
   });
 
   if (!res.ok) {
@@ -77,10 +78,10 @@ run();
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
-
 ### Response
 
 **Promise\<[components.CreatedThreadResponse](../../models/components/createdthreadresponse.md)\>**
+
 ### Errors
 
 | Error Object         | Status Code          | Content Type         |
