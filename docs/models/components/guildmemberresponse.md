@@ -6,19 +6,21 @@
 import { GuildMemberResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: GuildMemberResponse = {
-    flags: 105907,
-    joinedAt: new Date("2023-03-31T11:16:03.717Z"),
-    pending: false,
-    roles: ["<value>"],
-    user: {
-        id: "<value>",
-        username: "Jaren77",
-        discriminator: "<value>",
-        publicFlags: 736918,
-        flags: 456150,
-    },
-    mute: false,
-    deaf: false,
+  flags: 20107,
+  joinedAt: new Date("2024-06-27T12:26:18.703Z"),
+  pending: false,
+  roles: [
+    "<value>",
+  ],
+  user: {
+    id: "<value>",
+    username: "Abigale_Glover96",
+    discriminator: "<value>",
+    publicFlags: 576157,
+    flags: 592042,
+  },
+  mute: false,
+  deaf: false,
 };
 ```
 

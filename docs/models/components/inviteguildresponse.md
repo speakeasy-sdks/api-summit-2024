@@ -6,9 +6,11 @@
 import { InviteGuildResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: InviteGuildResponse = {
-    id: "<value>",
-    name: "<value>",
-    features: ["<value>"],
+  id: "<value>",
+  name: "<value>",
+  features: [
+    "<value>",
+  ],
 };
 ```
 

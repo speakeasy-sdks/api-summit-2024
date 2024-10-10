@@ -6,8 +6,8 @@
 import { SelectOption } from "@speakeasy-sdks/discord/models/components";
 
 let value: SelectOption = {
-    label: "<value>",
-    value: "<value>",
+  label: "<value>",
+  value: "<value>",
 };
 ```
 

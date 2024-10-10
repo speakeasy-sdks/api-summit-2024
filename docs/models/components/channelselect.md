@@ -6,7 +6,7 @@
 import { ChannelSelect } from "@speakeasy-sdks/discord/models/components";
 
 let value: ChannelSelect = {
-    customId: "<value>",
+  customId: "<id>",
 };
 ```
 

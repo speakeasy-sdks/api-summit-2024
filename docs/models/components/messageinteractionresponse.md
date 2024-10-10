@@ -6,8 +6,8 @@
 import { MessageInteractionResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageInteractionResponse = {
-    id: "<value>",
-    name: "<value>",
+  id: "<value>",
+  name: "<value>",
 };
 ```
 

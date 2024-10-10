@@ -6,7 +6,7 @@
 import { ByNWeekdayResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ByNWeekdayResponse = {
-    n: 979587,
+  n: 577543,
 };
 ```
 

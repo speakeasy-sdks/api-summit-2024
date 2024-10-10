@@ -6,8 +6,8 @@
 import { CreateChannelInviteRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: CreateChannelInviteRequest = {
-    channelId: "<value>",
-    requestBody: {},
+  channelId: "<value>",
+  requestBody: {},
 };
 ```
 

@@ -1,30 +1,29 @@
 # Stickers
 
-## Example Usage
-
-```typescript
-import { Stickers } from "@speakeasy-sdks/discord/models/components";
-
-let value: Stickers = {
-    id: "<value>",
-    name: "<value>",
-    tags: "<value>",
-    packId: "<value>",
-    sortValue: 844266,
-};
-```
 
 ## Supported Types
 
 ### `components.GuildStickerResponse`
 
 ```typescript
-const value: components.GuildStickerResponse = /* values here */
+const value: components.GuildStickerResponse = {
+  id: "<value>",
+  name: "<value>",
+  tags: "<value>",
+  available: false,
+  guildId: "<value>",
+};
 ```
 
 ### `components.StandardStickerResponse`
 
 ```typescript
-const value: components.StandardStickerResponse = /* values here */
+const value: components.StandardStickerResponse = {
+  id: "<value>",
+  name: "<value>",
+  tags: "<value>",
+  packId: "<value>",
+  sortValue: 963663,
+};
 ```
 

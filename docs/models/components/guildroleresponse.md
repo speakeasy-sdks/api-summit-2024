@@ -6,14 +6,14 @@
 import { GuildRoleResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: GuildRoleResponse = {
-    id: "<value>",
-    name: "<value>",
-    permissions: "<value>",
-    position: 128926,
-    color: 750686,
-    hoist: false,
-    managed: false,
-    mentionable: false,
+  id: "<value>",
+  name: "<value>",
+  permissions: "<value>",
+  position: 663078,
+  color: 263322,
+  hoist: false,
+  managed: false,
+  mentionable: false,
 };
 ```
 

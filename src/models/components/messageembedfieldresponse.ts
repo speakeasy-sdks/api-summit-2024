@@ -5,38 +5,38 @@
 import * as z from "zod";
 
 export type MessageEmbedFieldResponse = {
-    name: string;
-    value: string;
-    inline: boolean;
+  name: string;
+  value: string;
+  inline: boolean;
 };
 
 /** @internal */
 export const MessageEmbedFieldResponse$inboundSchema: z.ZodType<
-    MessageEmbedFieldResponse,
-    z.ZodTypeDef,
-    unknown
+  MessageEmbedFieldResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    name: z.string(),
-    value: z.string(),
-    inline: z.boolean(),
+  name: z.string(),
+  value: z.string(),
+  inline: z.boolean(),
 });
 
 /** @internal */
 export type MessageEmbedFieldResponse$Outbound = {
-    name: string;
-    value: string;
-    inline: boolean;
+  name: string;
+  value: string;
+  inline: boolean;
 };
 
 /** @internal */
 export const MessageEmbedFieldResponse$outboundSchema: z.ZodType<
-    MessageEmbedFieldResponse$Outbound,
-    z.ZodTypeDef,
-    MessageEmbedFieldResponse
+  MessageEmbedFieldResponse$Outbound,
+  z.ZodTypeDef,
+  MessageEmbedFieldResponse
 > = z.object({
-    name: z.string(),
-    value: z.string(),
-    inline: z.boolean(),
+  name: z.string(),
+  value: z.string(),
+  inline: z.boolean(),
 });
 
 /**
@@ -44,10 +44,10 @@ export const MessageEmbedFieldResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace MessageEmbedFieldResponse$ {
-    /** @deprecated use `MessageEmbedFieldResponse$inboundSchema` instead. */
-    export const inboundSchema = MessageEmbedFieldResponse$inboundSchema;
-    /** @deprecated use `MessageEmbedFieldResponse$outboundSchema` instead. */
-    export const outboundSchema = MessageEmbedFieldResponse$outboundSchema;
-    /** @deprecated use `MessageEmbedFieldResponse$Outbound` instead. */
-    export type Outbound = MessageEmbedFieldResponse$Outbound;
+  /** @deprecated use `MessageEmbedFieldResponse$inboundSchema` instead. */
+  export const inboundSchema = MessageEmbedFieldResponse$inboundSchema;
+  /** @deprecated use `MessageEmbedFieldResponse$outboundSchema` instead. */
+  export const outboundSchema = MessageEmbedFieldResponse$outboundSchema;
+  /** @deprecated use `MessageEmbedFieldResponse$Outbound` instead. */
+  export type Outbound = MessageEmbedFieldResponse$Outbound;
 }

@@ -16,8 +16,34 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasy.com/docs/advanced-setup/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
 
+<!-- Start Summary [summary] -->
+## Summary
+
+Discord HTTP API (Preview): Preview of the Discord v10 HTTP API specification. See https://discord.com/developers/docs for more details.
+
+For more information about the API: [Discord Developer Documentation](https://discord.com/developers/docs)
+<!-- End Summary [summary] -->
+
+<!-- Start Table of Contents [toc] -->
+## Table of Contents
+
+* [SDK Installation](#sdk-installation)
+* [Requirements](#requirements)
+* [SDK Example Usage](#sdk-example-usage)
+* [Available Resources and Operations](#available-resources-and-operations)
+* [Standalone functions](#standalone-functions)
+* [Retries](#retries)
+* [Error Handling](#error-handling)
+* [Server Selection](#server-selection)
+* [Custom HTTP Client](#custom-http-client)
+* [Authentication](#authentication)
+* [Debugging](#debugging)
+<!-- End Table of Contents [toc] -->
+
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
+
+The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/) or [yarn](https://classic.yarnpkg.com/en/) package managers.
 
 ### NPM
 
@@ -62,17 +88,17 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
-    botToken: "<YOUR_API_KEY_HERE>",
+  botToken: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await discord.messages.get({
-        channelId: "<value>",
-        messageId: "<value>",
-    });
+  const result = await discord.messages.get({
+    channelId: "<value>",
+    messageId: "<value>",
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -83,6 +109,21 @@ run();
 <!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
+<details open>
+<summary>Available methods</summary>
+
+### [channelInvites](docs/sdks/channelinvites/README.md)
+
+* [list](docs/sdks/channelinvites/README.md#list)
+* [create](docs/sdks/channelinvites/README.md#create)
+
+### [channels](docs/sdks/channels/README.md)
+
+* [get](docs/sdks/channels/README.md#get)
+* [delete](docs/sdks/channels/README.md#delete)
+* [update](docs/sdks/channels/README.md#update)
+
+
 ### [messages](docs/sdks/messages/README.md)
 
 * [get](docs/sdks/messages/README.md#get)
@@ -91,20 +132,11 @@ run();
 * [list](docs/sdks/messages/README.md#list)
 * [create](docs/sdks/messages/README.md#create)
 
-### [channelInvites](docs/sdks/channelinvites/README.md)
-
-* [list](docs/sdks/channelinvites/README.md#list)
-* [create](docs/sdks/channelinvites/README.md#create)
-
 ### [threads](docs/sdks/threads/README.md)
 
 * [create](docs/sdks/threads/README.md#create)
 
-### [channels](docs/sdks/channels/README.md)
-
-* [get](docs/sdks/channels/README.md#get)
-* [delete](docs/sdks/channels/README.md#delete)
-* [update](docs/sdks/channels/README.md#update)
+</details>
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Standalone functions [standalone-funcs] -->
@@ -122,18 +154,17 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [channelInvitesCreate](docs/sdks/channelinvites/README.md#create)
-- [channelInvitesList](docs/sdks/channelinvites/README.md#list)
-- [channelsDelete](docs/sdks/channels/README.md#delete)
-- [channelsGet](docs/sdks/channels/README.md#get)
-- [channelsUpdate](docs/sdks/channels/README.md#update)
-- [messagesCreate](docs/sdks/messages/README.md#create)
-- [messagesDelete](docs/sdks/messages/README.md#delete)
-- [messagesGet](docs/sdks/messages/README.md#get)
-- [messagesList](docs/sdks/messages/README.md#list)
-- [messagesUpdate](docs/sdks/messages/README.md#update)
-- [threadsCreate](docs/sdks/threads/README.md#create)
-
+- [`channelInvitesCreate`](docs/sdks/channelinvites/README.md#create)
+- [`channelInvitesList`](docs/sdks/channelinvites/README.md#list)
+- [`channelsDelete`](docs/sdks/channels/README.md#delete)
+- [`channelsGet`](docs/sdks/channels/README.md#get)
+- [`channelsUpdate`](docs/sdks/channels/README.md#update)
+- [`messagesCreate`](docs/sdks/messages/README.md#create)
+- [`messagesDelete`](docs/sdks/messages/README.md#delete)
+- [`messagesGet`](docs/sdks/messages/README.md#get)
+- [`messagesList`](docs/sdks/messages/README.md#list)
+- [`messagesUpdate`](docs/sdks/messages/README.md#update)
+- [`threadsCreate`](docs/sdks/threads/README.md#create)
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->
@@ -148,31 +179,28 @@ To change the default retry strategy for a single API call, simply provide a ret
 import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
-    botToken: "<YOUR_API_KEY_HERE>",
+  botToken: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await discord.messages.get(
-        {
-            channelId: "<value>",
-            messageId: "<value>",
-        },
-        {
-            retries: {
-                strategy: "backoff",
-                backoff: {
-                    initialInterval: 1,
-                    maxInterval: 50,
-                    exponent: 1.1,
-                    maxElapsedTime: 100,
-                },
-                retryConnectionErrors: false,
-            },
-        }
-    );
+  const result = await discord.messages.get({
+    channelId: "<value>",
+    messageId: "<value>",
+  }, {
+    retries: {
+      strategy: "backoff",
+      backoff: {
+        initialInterval: 1,
+        maxInterval: 50,
+        exponent: 1.1,
+        maxElapsedTime: 100,
+      },
+      retryConnectionErrors: false,
+    },
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -184,27 +212,27 @@ If you'd like to override the default retry strategy for all operations that sup
 import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
-    retryConfig: {
-        strategy: "backoff",
-        backoff: {
-            initialInterval: 1,
-            maxInterval: 50,
-            exponent: 1.1,
-            maxElapsedTime: 100,
-        },
-        retryConnectionErrors: false,
+  retryConfig: {
+    strategy: "backoff",
+    backoff: {
+      initialInterval: 1,
+      maxInterval: 50,
+      exponent: 1.1,
+      maxElapsedTime: 100,
     },
-    botToken: "<YOUR_API_KEY_HERE>",
+    retryConnectionErrors: false,
+  },
+  botToken: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await discord.messages.get({
-        channelId: "<value>",
-        messageId: "<value>",
-    });
+  const result = await discord.messages.get({
+    channelId: "<value>",
+    messageId: "<value>",
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -215,57 +243,72 @@ run();
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-All SDK methods return a response object or throw an error. If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+All SDK methods return a response object or throw an error. By default, an API error will throw a `errors.SDKError`.
 
-| Error Object         | Status Code          | Content Type         |
+If a HTTP request fails, an operation my also throw an error from the `models/errors/httpclienterrors.ts` module:
+
+| HTTP Client Error                                    | Description                                          |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| RequestAbortedError                                  | HTTP request was aborted by the client               |
+| RequestTimeoutError                                  | HTTP request timed out due to an AbortSignal signal  |
+| ConnectionError                                      | HTTP client was unable to make a request to a server |
+| InvalidRequestError                                  | Any input used to create a request is invalid        |
+| UnexpectedClientError                                | Unrecognised or unexpected error                     |
+
+In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `get` method may throw the following errors:
+
+| Error Type           | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.ErrorResponse | 4XX                  | application/json     |
-| errors.SDKError      | 4xx-5xx              | */*                  |
-
-Validation errors can also occur when either method arguments or data returned from the server do not match the expected format. The `SDKValidationError` that is thrown as a result will capture the raw value that failed validation in an attribute called `rawValue`. Additionally, a `pretty()` method is available on this error that can be used to log a nicely formatted string since validation errors can list many issues and the plain error string may be difficult read when debugging. 
-
+| errors.SDKError      | 5XX                  | \*/\*                |
 
 ```typescript
 import { Discord } from "@speakeasy-sdks/discord";
-import { SDKValidationError } from "@speakeasy-sdks/discord/models/errors";
+import {
+  ErrorResponse,
+  SDKValidationError,
+} from "@speakeasy-sdks/discord/models/errors";
 
 const discord = new Discord({
-    botToken: "<YOUR_API_KEY_HERE>",
+  botToken: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    let result;
-    try {
-        result = await discord.messages.get({
-            channelId: "<value>",
-            messageId: "<value>",
-        });
-    } catch (err) {
-        switch (true) {
-            case err instanceof SDKValidationError: {
-                // Validation errors can be pretty-printed
-                console.error(err.pretty());
-                // Raw value may also be inspected
-                console.error(err.rawValue);
-                return;
-            }
-            case err instanceof errors.ErrorResponse: {
-                console.error(err); // handle exception
-                return;
-            }
-            default: {
-                throw err;
-            }
-        }
-    }
+  let result;
+  try {
+    result = await discord.messages.get({
+      channelId: "<value>",
+      messageId: "<value>",
+    });
 
     // Handle the result
     console.log(result);
+  } catch (err) {
+    switch (true) {
+      case (err instanceof SDKValidationError): {
+        // Validation errors can be pretty-printed
+        console.error(err.pretty());
+        // Raw value may also be inspected
+        console.error(err.rawValue);
+        return;
+      }
+      case (err instanceof ErrorResponse): {
+        // Handle err.data$: ErrorResponseData
+        console.error(err);
+        return;
+      }
+      default: {
+        throw err;
+      }
+    }
+  }
 }
 
 run();
 
 ```
+
+Validation errors can also occur when either method arguments or data returned from the server do not match the expected format. The `SDKValidationError` that is thrown as a result will capture the raw value that failed validation in an attribute called `rawValue`. Additionally, a `pretty()` method is available on this error that can be used to log a nicely formatted string since validation errors can list many issues and the plain error string may be difficult read when debugging.
 <!-- End Error Handling [errors] -->
 
 <!-- Start Server Selection [server] -->
@@ -283,18 +326,18 @@ You can override the default server globally by passing a server index to the `s
 import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
-    serverIdx: 0,
-    botToken: "<YOUR_API_KEY_HERE>",
+  serverIdx: 0,
+  botToken: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await discord.messages.get({
-        channelId: "<value>",
-        messageId: "<value>",
-    });
+  const result = await discord.messages.get({
+    channelId: "<value>",
+    messageId: "<value>",
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -310,18 +353,18 @@ The default server can also be overridden globally by passing a URL to the `serv
 import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
-    serverURL: "https://discord.com/api/v10",
-    botToken: "<YOUR_API_KEY_HERE>",
+  serverURL: "https://discord.com/api/v10",
+  botToken: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await discord.messages.get({
-        channelId: "<value>",
-        messageId: "<value>",
-    });
+  const result = await discord.messages.get({
+    channelId: "<value>",
+    messageId: "<value>",
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -394,17 +437,17 @@ To authenticate with the API the `botToken` parameter must be set when initializ
 import { Discord } from "@speakeasy-sdks/discord";
 
 const discord = new Discord({
-    botToken: "<YOUR_API_KEY_HERE>",
+  botToken: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await discord.messages.get({
-        channelId: "<value>",
-        messageId: "<value>",
-    });
+  const result = await discord.messages.get({
+    channelId: "<value>",
+    messageId: "<value>",
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();

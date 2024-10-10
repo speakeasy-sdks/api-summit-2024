@@ -6,8 +6,8 @@
 import { MessageComponentUserSelectResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageComponentUserSelectResponse = {
-    id: 338007,
-    customId: "<value>",
+  id: 144847,
+  customId: "<id>",
 };
 ```
 

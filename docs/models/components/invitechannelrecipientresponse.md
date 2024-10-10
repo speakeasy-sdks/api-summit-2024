@@ -6,7 +6,7 @@
 import { InviteChannelRecipientResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: InviteChannelRecipientResponse = {
-    username: "Ivah3",
+  username: "Gabe.Koelpin79",
 };
 ```
 

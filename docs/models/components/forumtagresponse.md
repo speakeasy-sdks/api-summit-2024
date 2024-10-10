@@ -6,9 +6,9 @@
 import { ForumTagResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ForumTagResponse = {
-    id: "<value>",
-    name: "<value>",
-    moderated: false,
+  id: "<value>",
+  name: "<value>",
+  moderated: false,
 };
 ```
 

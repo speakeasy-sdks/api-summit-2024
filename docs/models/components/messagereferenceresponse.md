@@ -6,7 +6,7 @@
 import { MessageReferenceResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageReferenceResponse = {
-    channelId: "<value>",
+  channelId: "<value>",
 };
 ```
 

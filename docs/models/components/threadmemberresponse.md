@@ -6,10 +6,10 @@
 import { ThreadMemberResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ThreadMemberResponse = {
-    id: "<value>",
-    userId: "<value>",
-    joinTimestamp: new Date("2024-04-11T10:37:31.008Z"),
-    flags: 521848,
+  id: "<value>",
+  userId: "<value>",
+  joinTimestamp: new Date("2022-07-20T18:39:56.110Z"),
+  flags: 586513,
 };
 ```
 

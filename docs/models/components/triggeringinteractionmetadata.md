@@ -1,29 +1,28 @@
 # TriggeringInteractionMetadata
 
-## Example Usage
-
-```typescript
-import { TriggeringInteractionMetadata } from "@speakeasy-sdks/discord/models/components";
-
-let value: TriggeringInteractionMetadata = {
-    id: "<value>",
-    authorizingIntegrationOwners: {
-        key: "<value>",
-    },
-};
-```
 
 ## Supported Types
 
 ### `components.ApplicationCommandInteractionMetadataResponse`
 
 ```typescript
-const value: components.ApplicationCommandInteractionMetadataResponse = /* values here */
+const value: components.ApplicationCommandInteractionMetadataResponse = {
+  id: "<value>",
+  authorizingIntegrationOwners: {
+    "key": "<value>",
+  },
+};
 ```
 
 ### `components.MessageComponentInteractionMetadataResponse`
 
 ```typescript
-const value: components.MessageComponentInteractionMetadataResponse = /* values here */
+const value: components.MessageComponentInteractionMetadataResponse = {
+  id: "<value>",
+  authorizingIntegrationOwners: {
+    "key": "<value>",
+  },
+  interactedMessageId: "<value>",
+};
 ```
 

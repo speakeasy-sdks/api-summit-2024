@@ -6,8 +6,8 @@
 import { InputText } from "@speakeasy-sdks/discord/models/components";
 
 let value: InputText = {
-    customId: "<value>",
-    label: "<value>",
+  customId: "<id>",
+  label: "<value>",
 };
 ```
 

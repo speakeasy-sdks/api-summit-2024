@@ -6,7 +6,7 @@
 import { MessageAttachmentRequest } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageAttachmentRequest = {
-    id: "<value>",
+  id: "<value>",
 };
 ```
 

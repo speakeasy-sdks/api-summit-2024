@@ -6,11 +6,11 @@
 import { StandardStickerResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: StandardStickerResponse = {
-    id: "<value>",
-    name: "<value>",
-    tags: "<value>",
-    packId: "<value>",
-    sortValue: 18789,
+  id: "<value>",
+  name: "<value>",
+  tags: "<value>",
+  packId: "<value>",
+  sortValue: 569101,
 };
 ```
 
