@@ -1,24 +1,17 @@
 # BasicMessageResponseNonce
 
-## Example Usage
-
-```typescript
-import { BasicMessageResponseNonce } from "@speakeasy-sdks/discord/models/components";
-
-let value: BasicMessageResponseNonce = "<value>";
-```
 
 ## Supported Types
 
 ### `number`
 
 ```typescript
-const value: number = /* values here */
+const value: number = 363711;
 ```
 
 ### `string`
 
 ```typescript
-const value: string = /* values here */
+const value: string = "<value>";
 ```
 

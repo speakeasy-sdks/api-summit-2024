@@ -6,8 +6,8 @@
 import { MessageComponentChannelSelectResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageComponentChannelSelectResponse = {
-    id: 466311,
-    customId: "<value>",
+  id: 132068,
+  customId: "<id>",
 };
 ```
 

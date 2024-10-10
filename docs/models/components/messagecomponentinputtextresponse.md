@@ -6,8 +6,8 @@
 import { MessageComponentInputTextResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageComponentInputTextResponse = {
-    id: 474697,
-    customId: "<value>",
+  id: 716860,
+  customId: "<id>",
 };
 ```
 

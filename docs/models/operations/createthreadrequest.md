@@ -6,10 +6,10 @@
 import { CreateThreadRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: CreateThreadRequest = {
-    channelId: "<value>",
-    requestBody: {
-        name: "<value>",
-    },
+  channelId: "<value>",
+  requestBody: {
+    name: "<value>",
+  },
 };
 ```
 

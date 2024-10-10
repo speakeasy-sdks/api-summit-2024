@@ -6,7 +6,7 @@
 import { MessageComponentButtonResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageComponentButtonResponse = {
-    id: 414369,
+  id: 517379,
 };
 ```
 

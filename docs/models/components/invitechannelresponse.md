@@ -6,7 +6,7 @@
 import { InviteChannelResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: InviteChannelResponse = {
-    id: "<value>",
+  id: "<value>",
 };
 ```
 

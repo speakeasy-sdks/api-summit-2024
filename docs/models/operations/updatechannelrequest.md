@@ -6,8 +6,8 @@
 import { UpdateChannelRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: UpdateChannelRequest = {
-    channelId: "<value>",
-    requestBody: {},
+  channelId: "<value>",
+  requestBody: {},
 };
 ```
 

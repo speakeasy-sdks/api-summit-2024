@@ -6,9 +6,9 @@
 import { UpdateMessageRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: UpdateMessageRequest = {
-    channelId: "<value>",
-    messageId: "<value>",
-    messageEditRequestPartial: {},
+  channelId: "<value>",
+  messageId: "<value>",
+  messageEditRequestPartial: {},
 };
 ```
 

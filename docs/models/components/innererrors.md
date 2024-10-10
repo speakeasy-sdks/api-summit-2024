@@ -6,12 +6,12 @@
 import { InnerErrors } from "@speakeasy-sdks/discord/models/components";
 
 let value: InnerErrors = {
-    errors: [
-        {
-            code: 468651,
-            message: "<value>",
-        },
-    ],
+  errors: [
+    {
+      code: 259422,
+      message: "<value>",
+    },
+  ],
 };
 ```
 

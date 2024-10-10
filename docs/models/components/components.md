@@ -1,57 +1,67 @@
 # Components
 
-## Example Usage
-
-```typescript
-import { Components } from "@speakeasy-sdks/discord/models/components";
-
-let value: Components = {
-    id: 581850,
-    customId: "<value>",
-};
-```
 
 ## Supported Types
 
 ### `components.MessageComponentButtonResponse`
 
 ```typescript
-const value: components.MessageComponentButtonResponse = /* values here */
+const value: components.MessageComponentButtonResponse = {
+  id: 207470,
+};
 ```
 
 ### `components.MessageComponentChannelSelectResponse`
 
 ```typescript
-const value: components.MessageComponentChannelSelectResponse = /* values here */
+const value: components.MessageComponentChannelSelectResponse = {
+  id: 424685,
+  customId: "<id>",
+};
 ```
 
 ### `components.MessageComponentInputTextResponse`
 
 ```typescript
-const value: components.MessageComponentInputTextResponse = /* values here */
+const value: components.MessageComponentInputTextResponse = {
+  id: 374170,
+  customId: "<id>",
+};
 ```
 
 ### `components.MessageComponentMentionableSelectResponse`
 
 ```typescript
-const value: components.MessageComponentMentionableSelectResponse = /* values here */
+const value: components.MessageComponentMentionableSelectResponse = {
+  id: 463575,
+  customId: "<id>",
+};
 ```
 
 ### `components.MessageComponentRoleSelectResponse`
 
 ```typescript
-const value: components.MessageComponentRoleSelectResponse = /* values here */
+const value: components.MessageComponentRoleSelectResponse = {
+  id: 277628,
+  customId: "<id>",
+};
 ```
 
 ### `components.MessageComponentStringSelectResponse`
 
 ```typescript
-const value: components.MessageComponentStringSelectResponse = /* values here */
+const value: components.MessageComponentStringSelectResponse = {
+  id: 586784,
+  customId: "<id>",
+};
 ```
 
 ### `components.MessageComponentUserSelectResponse`
 
 ```typescript
-const value: components.MessageComponentUserSelectResponse = /* values here */
+const value: components.MessageComponentUserSelectResponse = {
+  id: 863856,
+  customId: "<id>",
+};
 ```
 

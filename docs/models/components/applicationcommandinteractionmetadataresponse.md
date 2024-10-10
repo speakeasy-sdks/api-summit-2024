@@ -6,10 +6,10 @@
 import { ApplicationCommandInteractionMetadataResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ApplicationCommandInteractionMetadataResponse = {
-    id: "<value>",
-    authorizingIntegrationOwners: {
-        key: "<value>",
-    },
+  id: "<value>",
+  authorizingIntegrationOwners: {
+    "key": "<value>",
+  },
 };
 ```
 

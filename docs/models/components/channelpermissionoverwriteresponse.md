@@ -6,9 +6,9 @@
 import { ChannelPermissionOverwriteResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ChannelPermissionOverwriteResponse = {
-    id: "<value>",
-    allow: "<value>",
-    deny: "<value>",
+  id: "<value>",
+  allow: "<value>",
+  deny: "<value>",
 };
 ```
 

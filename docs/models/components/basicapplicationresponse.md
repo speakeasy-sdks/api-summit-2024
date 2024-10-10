@@ -6,9 +6,9 @@
 import { BasicApplicationResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: BasicApplicationResponse = {
-    id: "<value>",
-    name: "<value>",
-    description: "Down-sized local budgetary management",
+  id: "<value>",
+  name: "<value>",
+  description: "sidetrack mature regularly mouser inject worth uh-huh",
 };
 ```
 

@@ -2,49 +2,69 @@
 
 200 response for update_channel
 
-## Example Usage
-
-```typescript
-import { UpdateChannelResponseBody } from "@speakeasy-sdks/discord/models/operations";
-
-let value: UpdateChannelResponseBody = {
-    id: "<value>",
-    flags: 841386,
-    recipients: [
-        {
-            id: "<value>",
-            username: "Edyth39",
-            discriminator: "<value>",
-            publicFlags: 586513,
-            flags: 552822,
-        },
-    ],
-};
-```
 
 ## Supported Types
 
 ### `components.GuildChannelResponse`
 
 ```typescript
-const value: components.GuildChannelResponse = /* values here */
+const value: components.GuildChannelResponse = {
+  id: "<value>",
+  flags: 699575,
+  guildId: "<value>",
+  name: "<value>",
+  position: 967966,
+};
 ```
 
 ### `components.PrivateChannelResponse`
 
 ```typescript
-const value: components.PrivateChannelResponse = /* values here */
+const value: components.PrivateChannelResponse = {
+  id: "<value>",
+  flags: 994401,
+  recipients: [
+    {
+      id: "<value>",
+      username: "Ivy.Greenholt41",
+      discriminator: "<value>",
+      publicFlags: 604118,
+      flags: 382808,
+    },
+  ],
+};
 ```
 
 ### `components.PrivateGroupChannelResponse`
 
 ```typescript
-const value: components.PrivateGroupChannelResponse = /* values here */
+const value: components.PrivateGroupChannelResponse = {
+  id: "<value>",
+  flags: 895386,
+  recipients: [
+    {
+      id: "<value>",
+      username: "Viviane_Goodwin",
+      discriminator: "<value>",
+      publicFlags: 552078,
+      flags: 271653,
+    },
+  ],
+};
 ```
 
 ### `components.ThreadResponse`
 
 ```typescript
-const value: components.ThreadResponse = /* values here */
+const value: components.ThreadResponse = {
+  id: "<value>",
+  flags: 455444,
+  guildId: "<value>",
+  name: "<value>",
+  ownerId: "<value>",
+  messageCount: 401713,
+  memberCount: 248413,
+  totalMessageSent: 505866,
+};
 ```
 

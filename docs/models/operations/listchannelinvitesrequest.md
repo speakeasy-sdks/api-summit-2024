@@ -6,7 +6,7 @@
 import { ListChannelInvitesRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: ListChannelInvitesRequest = {
-    channelId: "<value>",
+  channelId: "<value>",
 };
 ```
 

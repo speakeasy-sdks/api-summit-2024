@@ -6,11 +6,11 @@
 import { GuildStickerResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: GuildStickerResponse = {
-    id: "<value>",
-    name: "<value>",
-    tags: "<value>",
-    available: false,
-    guildId: "<value>",
+  id: "<value>",
+  name: "<value>",
+  tags: "<value>",
+  available: false,
+  guildId: "<value>",
 };
 ```
 

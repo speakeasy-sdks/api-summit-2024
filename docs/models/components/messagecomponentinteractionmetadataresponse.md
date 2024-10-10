@@ -6,11 +6,11 @@
 import { MessageComponentInteractionMetadataResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageComponentInteractionMetadataResponse = {
-    id: "<value>",
-    authorizingIntegrationOwners: {
-        key: "<value>",
-    },
-    interactedMessageId: "<value>",
+  id: "<value>",
+  authorizingIntegrationOwners: {
+    "key": "<value>",
+  },
+  interactedMessageId: "<value>",
 };
 ```
 

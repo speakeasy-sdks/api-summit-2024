@@ -6,7 +6,7 @@
 import { MessageReferenceRequest } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageReferenceRequest = {
-    messageId: "<value>",
+  messageId: "<value>",
 };
 ```
 

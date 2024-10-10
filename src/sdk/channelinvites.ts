@@ -9,17 +9,25 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class ChannelInvites extends ClientSDK {
-    async list(
-        request: operations.ListChannelInvitesRequest,
-        options?: RequestOptions
-    ): Promise<Array<operations.ResponseBody>> {
-        return unwrapAsync(channelInvitesList(this, request, options));
-    }
+  async list(
+    request: operations.ListChannelInvitesRequest,
+    options?: RequestOptions,
+  ): Promise<Array<operations.ResponseBody>> {
+    return unwrapAsync(channelInvitesList(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    async create(
-        request: operations.CreateChannelInviteRequest,
-        options?: RequestOptions
-    ): Promise<operations.CreateChannelInviteResponseBody | undefined> {
-        return unwrapAsync(channelInvitesCreate(this, request, options));
-    }
+  async create(
+    request: operations.CreateChannelInviteRequest,
+    options?: RequestOptions,
+  ): Promise<operations.CreateChannelInviteResponseBody | undefined> {
+    return unwrapAsync(channelInvitesCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 }

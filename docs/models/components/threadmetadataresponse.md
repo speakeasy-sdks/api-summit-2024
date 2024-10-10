@@ -6,8 +6,8 @@
 import { ThreadMetadataResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ThreadMetadataResponse = {
-    archived: false,
-    locked: false,
+  archived: false,
+  locked: false,
 };
 ```
 

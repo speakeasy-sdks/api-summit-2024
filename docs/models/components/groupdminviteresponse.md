@@ -6,7 +6,7 @@
 import { GroupDMInviteResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: GroupDMInviteResponse = {
-    code: "<value>",
+  code: "<value>",
 };
 ```
 

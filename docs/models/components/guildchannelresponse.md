@@ -6,11 +6,11 @@
 import { GuildChannelResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: GuildChannelResponse = {
-    id: "<value>",
-    flags: 315428,
-    guildId: "<value>",
-    name: "<value>",
-    position: 607831,
+  id: "<value>",
+  flags: 20651,
+  guildId: "<value>",
+  name: "<value>",
+  position: 758379,
 };
 ```
 

@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type MessageEmbedProviderResponse = {
-    name: string;
-    url?: string | null | undefined;
+  name: string;
+  url?: string | null | undefined;
 };
 
 /** @internal */
 export const MessageEmbedProviderResponse$inboundSchema: z.ZodType<
-    MessageEmbedProviderResponse,
-    z.ZodTypeDef,
-    unknown
+  MessageEmbedProviderResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    name: z.string(),
-    url: z.nullable(z.string()).optional(),
+  name: z.string(),
+  url: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type MessageEmbedProviderResponse$Outbound = {
-    name: string;
-    url?: string | null | undefined;
+  name: string;
+  url?: string | null | undefined;
 };
 
 /** @internal */
 export const MessageEmbedProviderResponse$outboundSchema: z.ZodType<
-    MessageEmbedProviderResponse$Outbound,
-    z.ZodTypeDef,
-    MessageEmbedProviderResponse
+  MessageEmbedProviderResponse$Outbound,
+  z.ZodTypeDef,
+  MessageEmbedProviderResponse
 > = z.object({
-    name: z.string(),
-    url: z.nullable(z.string()).optional(),
+  name: z.string(),
+  url: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const MessageEmbedProviderResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace MessageEmbedProviderResponse$ {
-    /** @deprecated use `MessageEmbedProviderResponse$inboundSchema` instead. */
-    export const inboundSchema = MessageEmbedProviderResponse$inboundSchema;
-    /** @deprecated use `MessageEmbedProviderResponse$outboundSchema` instead. */
-    export const outboundSchema = MessageEmbedProviderResponse$outboundSchema;
-    /** @deprecated use `MessageEmbedProviderResponse$Outbound` instead. */
-    export type Outbound = MessageEmbedProviderResponse$Outbound;
+  /** @deprecated use `MessageEmbedProviderResponse$inboundSchema` instead. */
+  export const inboundSchema = MessageEmbedProviderResponse$inboundSchema;
+  /** @deprecated use `MessageEmbedProviderResponse$outboundSchema` instead. */
+  export const outboundSchema = MessageEmbedProviderResponse$outboundSchema;
+  /** @deprecated use `MessageEmbedProviderResponse$Outbound` instead. */
+  export type Outbound = MessageEmbedProviderResponse$Outbound;
 }

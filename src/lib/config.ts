@@ -10,49 +10,52 @@ import { Params, pathToFunc } from "./url.js";
 /**
  * Contains the list of servers available to the SDK
  */
-export const ServerList = ["https://discord.com/api/v10"] as const;
+export const ServerList = [
+  "https://discord.com/api/v10",
+] as const;
 
 export type SDKOptions = {
-    botToken?: string | (() => Promise<string>);
+  botToken?: string | (() => Promise<string>);
 
-    httpClient?: HTTPClient;
-    /**
-     * Allows overriding the default server used by the SDK
-     */
-    serverIdx?: number;
-    /**
-     * Allows overriding the default server URL used by the SDK
-     */
-    serverURL?: string;
-    /**
-     * Allows overriding the default retry config used by the SDK
-     */
-    retryConfig?: RetryConfig;
-    timeoutMs?: number;
-    debugLogger?: Logger;
+  httpClient?: HTTPClient;
+  /**
+   * Allows overriding the default server used by the SDK
+   */
+  serverIdx?: number;
+  /**
+   * Allows overriding the default server URL used by the SDK
+   */
+  serverURL?: string;
+  /**
+   * Allows overriding the default retry config used by the SDK
+   */
+  retryConfig?: RetryConfig;
+  timeoutMs?: number;
+  debugLogger?: Logger;
 };
 
 export function serverURLFromOptions(options: SDKOptions): URL | null {
-    let serverURL = options.serverURL;
+  let serverURL = options.serverURL;
 
-    const params: Params = {};
+  const params: Params = {};
 
-    if (!serverURL) {
-        const serverIdx = options.serverIdx ?? 0;
-        if (serverIdx < 0 || serverIdx >= ServerList.length) {
-            throw new Error(`Invalid server index ${serverIdx}`);
-        }
-        serverURL = ServerList[serverIdx] || "";
+  if (!serverURL) {
+    const serverIdx = options.serverIdx ?? 0;
+    if (serverIdx < 0 || serverIdx >= ServerList.length) {
+      throw new Error(`Invalid server index ${serverIdx}`);
     }
+    serverURL = ServerList[serverIdx] || "";
+  }
 
-    const u = pathToFunc(serverURL)(params);
-    return new URL(u);
+  const u = pathToFunc(serverURL)(params);
+  return new URL(u);
 }
 
 export const SDK_METADATA = {
-    language: "typescript",
-    openapiDocVersion: "10",
-    sdkVersion: "1.2.1",
-    genVersion: "2.404.11",
-    userAgent: "speakeasy-sdk/typescript 1.2.1 2.404.11 10 @speakeasy-sdks/discord",
+  language: "typescript",
+  openapiDocVersion: "10",
+  sdkVersion: "1.3.0",
+  genVersion: "2.437.1",
+  userAgent:
+    "speakeasy-sdk/typescript 1.3.0 2.437.1 10 @speakeasy-sdks/discord",
 } as const;

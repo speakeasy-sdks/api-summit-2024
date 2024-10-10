@@ -6,7 +6,7 @@
 import { UserSelect } from "@speakeasy-sdks/discord/models/components";
 
 let value: UserSelect = {
-    customId: "<value>",
+  customId: "<id>",
 };
 ```
 
