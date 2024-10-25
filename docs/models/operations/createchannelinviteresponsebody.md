@@ -2,33 +2,30 @@
 
 200 response for create_channel_invite
 
-## Example Usage
-
-```typescript
-import { CreateChannelInviteResponseBody } from "@speakeasy-sdks/discord/models/operations";
-
-let value: CreateChannelInviteResponseBody = {
-    code: "<value>",
-};
-```
 
 ## Supported Types
 
 ### `components.FriendInviteResponse`
 
 ```typescript
-const value: components.FriendInviteResponse = /* values here */
+const value: components.FriendInviteResponse = {
+  code: "<value>",
+};
 ```
 
 ### `components.GroupDMInviteResponse`
 
 ```typescript
-const value: components.GroupDMInviteResponse = /* values here */
+const value: components.GroupDMInviteResponse = {
+  code: "<value>",
+};
 ```
 
 ### `components.GuildInviteResponse`
 
 ```typescript
-const value: components.GuildInviteResponse = /* values here */
+const value: components.GuildInviteResponse = {
+  code: "<value>",
+};
 ```
 

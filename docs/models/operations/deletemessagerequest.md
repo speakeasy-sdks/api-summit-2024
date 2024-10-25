@@ -6,8 +6,8 @@
 import { DeleteMessageRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: DeleteMessageRequest = {
-    channelId: "<value>",
-    messageId: "<value>",
+  channelId: "<value>",
+  messageId: "<value>",
 };
 ```
 

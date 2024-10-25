@@ -6,8 +6,8 @@
 import { RichEmbedField } from "@speakeasy-sdks/discord/models/components";
 
 let value: RichEmbedField = {
-    name: "<value>",
-    value: "<value>",
+  name: "<value>",
+  value: "<value>",
 };
 ```
 

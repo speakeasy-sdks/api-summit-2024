@@ -6,7 +6,7 @@
 import { RoleSelect } from "@speakeasy-sdks/discord/models/components";
 
 let value: RoleSelect = {
-    customId: "<value>",
+  customId: "<id>",
 };
 ```
 

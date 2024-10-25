@@ -8,9 +8,9 @@ export type UserAvatarDecorationResponse = {};
 
 /** @internal */
 export const UserAvatarDecorationResponse$inboundSchema: z.ZodType<
-    UserAvatarDecorationResponse,
-    z.ZodTypeDef,
-    unknown
+  UserAvatarDecorationResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({});
 
 /** @internal */
@@ -18,9 +18,9 @@ export type UserAvatarDecorationResponse$Outbound = {};
 
 /** @internal */
 export const UserAvatarDecorationResponse$outboundSchema: z.ZodType<
-    UserAvatarDecorationResponse$Outbound,
-    z.ZodTypeDef,
-    UserAvatarDecorationResponse
+  UserAvatarDecorationResponse$Outbound,
+  z.ZodTypeDef,
+  UserAvatarDecorationResponse
 > = z.object({});
 
 /**
@@ -28,10 +28,10 @@ export const UserAvatarDecorationResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace UserAvatarDecorationResponse$ {
-    /** @deprecated use `UserAvatarDecorationResponse$inboundSchema` instead. */
-    export const inboundSchema = UserAvatarDecorationResponse$inboundSchema;
-    /** @deprecated use `UserAvatarDecorationResponse$outboundSchema` instead. */
-    export const outboundSchema = UserAvatarDecorationResponse$outboundSchema;
-    /** @deprecated use `UserAvatarDecorationResponse$Outbound` instead. */
-    export type Outbound = UserAvatarDecorationResponse$Outbound;
+  /** @deprecated use `UserAvatarDecorationResponse$inboundSchema` instead. */
+  export const inboundSchema = UserAvatarDecorationResponse$inboundSchema;
+  /** @deprecated use `UserAvatarDecorationResponse$outboundSchema` instead. */
+  export const outboundSchema = UserAvatarDecorationResponse$outboundSchema;
+  /** @deprecated use `UserAvatarDecorationResponse$Outbound` instead. */
+  export type Outbound = UserAvatarDecorationResponse$Outbound;
 }

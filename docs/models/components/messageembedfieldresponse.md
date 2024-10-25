@@ -6,9 +6,9 @@
 import { MessageEmbedFieldResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageEmbedFieldResponse = {
-    name: "<value>",
-    value: "<value>",
-    inline: false,
+  name: "<value>",
+  value: "<value>",
+  inline: false,
 };
 ```
 

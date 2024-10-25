@@ -29,7 +29,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -62,7 +62,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -83,11 +83,10 @@ run();
 
 ### Errors
 
-| Error Object         | Status Code          | Content Type         |
+| Error Type           | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.ErrorResponse | 4XX                  | application/json     |
-| errors.SDKError      | 4xx-5xx              | */*                  |
-
+| errors.SDKError      | 5XX                  | \*/\*                |
 
 ## delete
 
@@ -106,7 +105,7 @@ async function run() {
     messageId: "<value>",
   });
 
-  
+
 }
 
 run();
@@ -159,11 +158,10 @@ run();
 
 ### Errors
 
-| Error Object         | Status Code          | Content Type         |
+| Error Type           | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.ErrorResponse | 4XX                  | application/json     |
-| errors.SDKError      | 4xx-5xx              | */*                  |
-
+| errors.SDKError      | 5XX                  | \*/\*                |
 
 ## update
 
@@ -184,7 +182,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -218,7 +216,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -239,11 +237,10 @@ run();
 
 ### Errors
 
-| Error Object         | Status Code          | Content Type         |
+| Error Type           | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.ErrorResponse | 4XX                  | application/json     |
-| errors.SDKError      | 4xx-5xx              | */*                  |
-
+| errors.SDKError      | 5XX                  | \*/\*                |
 
 ## list
 
@@ -262,7 +259,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -294,7 +291,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -315,11 +312,10 @@ run();
 
 ### Errors
 
-| Error Object         | Status Code          | Content Type         |
+| Error Type           | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.ErrorResponse | 4XX                  | application/json     |
-| errors.SDKError      | 4xx-5xx              | */*                  |
-
+| errors.SDKError      | 5XX                  | \*/\*                |
 
 ## create
 
@@ -339,7 +335,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -372,7 +368,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -393,7 +389,7 @@ run();
 
 ### Errors
 
-| Error Object         | Status Code          | Content Type         |
+| Error Type           | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.ErrorResponse | 4XX                  | application/json     |
-| errors.SDKError      | 4xx-5xx              | */*                  |
+| errors.SDKError      | 5XX                  | \*/\*                |

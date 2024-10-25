@@ -6,7 +6,11 @@
 import { ActionRow } from "@speakeasy-sdks/discord/models/components";
 
 let value: ActionRow = {
-    components: [],
+  components: [
+    {
+      customId: "<id>",
+    },
+  ],
 };
 ```
 

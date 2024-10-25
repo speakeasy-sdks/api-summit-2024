@@ -7,31 +7,36 @@ import * as z from "zod";
 export type ApplicationIntegrationTypeConfigurationResponse = {};
 
 /** @internal */
-export const ApplicationIntegrationTypeConfigurationResponse$inboundSchema: z.ZodType<
+export const ApplicationIntegrationTypeConfigurationResponse$inboundSchema:
+  z.ZodType<
     ApplicationIntegrationTypeConfigurationResponse,
     z.ZodTypeDef,
     unknown
-> = z.object({});
+  > = z.object({});
 
 /** @internal */
 export type ApplicationIntegrationTypeConfigurationResponse$Outbound = {};
 
 /** @internal */
-export const ApplicationIntegrationTypeConfigurationResponse$outboundSchema: z.ZodType<
+export const ApplicationIntegrationTypeConfigurationResponse$outboundSchema:
+  z.ZodType<
     ApplicationIntegrationTypeConfigurationResponse$Outbound,
     z.ZodTypeDef,
     ApplicationIntegrationTypeConfigurationResponse
-> = z.object({});
+  > = z.object({});
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ApplicationIntegrationTypeConfigurationResponse$ {
-    /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$inboundSchema` instead. */
-    export const inboundSchema = ApplicationIntegrationTypeConfigurationResponse$inboundSchema;
-    /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$outboundSchema` instead. */
-    export const outboundSchema = ApplicationIntegrationTypeConfigurationResponse$outboundSchema;
-    /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$Outbound` instead. */
-    export type Outbound = ApplicationIntegrationTypeConfigurationResponse$Outbound;
+  /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$inboundSchema` instead. */
+  export const inboundSchema =
+    ApplicationIntegrationTypeConfigurationResponse$inboundSchema;
+  /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$outboundSchema` instead. */
+  export const outboundSchema =
+    ApplicationIntegrationTypeConfigurationResponse$outboundSchema;
+  /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$Outbound` instead. */
+  export type Outbound =
+    ApplicationIntegrationTypeConfigurationResponse$Outbound;
 }

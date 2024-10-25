@@ -6,8 +6,8 @@
 import { ScheduledEventUserResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ScheduledEventUserResponse = {
-    guildScheduledEventId: "<value>",
-    userId: "<value>",
+  guildScheduledEventId: "<value>",
+  userId: "<value>",
 };
 ```
 

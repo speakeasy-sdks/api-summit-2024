@@ -6,8 +6,8 @@
 import { GetMessageRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: GetMessageRequest = {
-    channelId: "<value>",
-    messageId: "<value>",
+  channelId: "<value>",
+  messageId: "<value>",
 };
 ```
 

@@ -5,42 +5,42 @@
 import * as z from "zod";
 
 export type ChannelPermissionOverwriteResponse = {
-    id: string;
-    type?: 0 | undefined;
-    allow: string;
-    deny: string;
+  id: string;
+  type?: 0 | undefined;
+  allow: string;
+  deny: string;
 };
 
 /** @internal */
 export const ChannelPermissionOverwriteResponse$inboundSchema: z.ZodType<
-    ChannelPermissionOverwriteResponse,
-    z.ZodTypeDef,
-    unknown
+  ChannelPermissionOverwriteResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    id: z.string(),
-    type: z.literal(0).optional(),
-    allow: z.string(),
-    deny: z.string(),
+  id: z.string(),
+  type: z.literal(0).optional(),
+  allow: z.string(),
+  deny: z.string(),
 });
 
 /** @internal */
 export type ChannelPermissionOverwriteResponse$Outbound = {
-    id: string;
-    type: 0;
-    allow: string;
-    deny: string;
+  id: string;
+  type: 0;
+  allow: string;
+  deny: string;
 };
 
 /** @internal */
 export const ChannelPermissionOverwriteResponse$outboundSchema: z.ZodType<
-    ChannelPermissionOverwriteResponse$Outbound,
-    z.ZodTypeDef,
-    ChannelPermissionOverwriteResponse
+  ChannelPermissionOverwriteResponse$Outbound,
+  z.ZodTypeDef,
+  ChannelPermissionOverwriteResponse
 > = z.object({
-    id: z.string(),
-    type: z.literal(0).default(0 as const),
-    allow: z.string(),
-    deny: z.string(),
+  id: z.string(),
+  type: z.literal(0).default(0 as const),
+  allow: z.string(),
+  deny: z.string(),
 });
 
 /**
@@ -48,10 +48,11 @@ export const ChannelPermissionOverwriteResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ChannelPermissionOverwriteResponse$ {
-    /** @deprecated use `ChannelPermissionOverwriteResponse$inboundSchema` instead. */
-    export const inboundSchema = ChannelPermissionOverwriteResponse$inboundSchema;
-    /** @deprecated use `ChannelPermissionOverwriteResponse$outboundSchema` instead. */
-    export const outboundSchema = ChannelPermissionOverwriteResponse$outboundSchema;
-    /** @deprecated use `ChannelPermissionOverwriteResponse$Outbound` instead. */
-    export type Outbound = ChannelPermissionOverwriteResponse$Outbound;
+  /** @deprecated use `ChannelPermissionOverwriteResponse$inboundSchema` instead. */
+  export const inboundSchema = ChannelPermissionOverwriteResponse$inboundSchema;
+  /** @deprecated use `ChannelPermissionOverwriteResponse$outboundSchema` instead. */
+  export const outboundSchema =
+    ChannelPermissionOverwriteResponse$outboundSchema;
+  /** @deprecated use `ChannelPermissionOverwriteResponse$Outbound` instead. */
+  export type Outbound = ChannelPermissionOverwriteResponse$Outbound;
 }

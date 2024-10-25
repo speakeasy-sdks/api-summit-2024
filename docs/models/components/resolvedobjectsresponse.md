@@ -6,45 +6,61 @@
 import { ResolvedObjectsResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ResolvedObjectsResponse = {
-    users: {
-        key: {
-            id: "<value>",
-            username: "Steve.Parker",
-            discriminator: "<value>",
-            publicFlags: 613064,
-            flags: 437032,
-        },
+  users: {
+    "key": {
+      id: "<value>",
+      username: "Kitty_Watsica",
+      discriminator: "<value>",
+      publicFlags: 730122,
+      flags: 311945,
     },
-    members: {
-        key: {
-            flags: 902349,
-            joinedAt: new Date("2024-02-04T14:29:27.472Z"),
-            pending: false,
-            roles: ["<value>"],
-            user: {
-                id: "<value>",
-                username: "Baby_Beier65",
-                discriminator: "<value>",
-                publicFlags: 670638,
-                flags: 170909,
-            },
-            mute: false,
-            deaf: false,
-        },
+  },
+  members: {
+    "key": {
+      flags: 398221,
+      joinedAt: new Date("2022-08-18T23:43:47.903Z"),
+      pending: false,
+      roles: [
+        "<value>",
+      ],
+      user: {
+        id: "<value>",
+        username: "Christy.Ritchie22",
+        discriminator: "<value>",
+        publicFlags: 58029,
+        flags: 434417,
+      },
+      mute: false,
+      deaf: false,
     },
-    channels: {},
-    roles: {
-        key: {
-            id: "<value>",
-            name: "<value>",
-            permissions: "<value>",
-            position: 210382,
-            color: 358152,
-            hoist: false,
-            managed: false,
-            mentionable: false,
+  },
+  channels: {
+    "key": {
+      id: "<value>",
+      flags: 696344,
+      recipients: [
+        {
+          id: "<value>",
+          username: "Gayle.Bailey",
+          discriminator: "<value>",
+          publicFlags: 536579,
+          flags: 896672,
         },
+      ],
     },
+  },
+  roles: {
+    "key": {
+      id: "<value>",
+      name: "<value>",
+      permissions: "<value>",
+      position: 990339,
+      color: 216897,
+      hoist: false,
+      managed: false,
+      mentionable: false,
+    },
+  },
 };
 ```
 

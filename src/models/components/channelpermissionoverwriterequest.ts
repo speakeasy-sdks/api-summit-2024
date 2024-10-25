@@ -5,42 +5,42 @@
 import * as z from "zod";
 
 export type ChannelPermissionOverwriteRequest = {
-    id: string;
-    type?: 0 | null | undefined;
-    allow?: number | null | undefined;
-    deny?: number | null | undefined;
+  id: string;
+  type?: 0 | null | undefined;
+  allow?: number | null | undefined;
+  deny?: number | null | undefined;
 };
 
 /** @internal */
 export const ChannelPermissionOverwriteRequest$inboundSchema: z.ZodType<
-    ChannelPermissionOverwriteRequest,
-    z.ZodTypeDef,
-    unknown
+  ChannelPermissionOverwriteRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    id: z.string(),
-    type: z.nullable(z.literal(0)).optional(),
-    allow: z.nullable(z.number().int()).optional(),
-    deny: z.nullable(z.number().int()).optional(),
+  id: z.string(),
+  type: z.nullable(z.literal(0)).optional(),
+  allow: z.nullable(z.number().int()).optional(),
+  deny: z.nullable(z.number().int()).optional(),
 });
 
 /** @internal */
 export type ChannelPermissionOverwriteRequest$Outbound = {
-    id: string;
-    type: 0 | null;
-    allow?: number | null | undefined;
-    deny?: number | null | undefined;
+  id: string;
+  type: 0 | null;
+  allow?: number | null | undefined;
+  deny?: number | null | undefined;
 };
 
 /** @internal */
 export const ChannelPermissionOverwriteRequest$outboundSchema: z.ZodType<
-    ChannelPermissionOverwriteRequest$Outbound,
-    z.ZodTypeDef,
-    ChannelPermissionOverwriteRequest
+  ChannelPermissionOverwriteRequest$Outbound,
+  z.ZodTypeDef,
+  ChannelPermissionOverwriteRequest
 > = z.object({
-    id: z.string(),
-    type: z.nullable(z.literal(0).default(0 as const)),
-    allow: z.nullable(z.number().int()).optional(),
-    deny: z.nullable(z.number().int()).optional(),
+  id: z.string(),
+  type: z.nullable(z.literal(0).default(0 as const)),
+  allow: z.nullable(z.number().int()).optional(),
+  deny: z.nullable(z.number().int()).optional(),
 });
 
 /**
@@ -48,10 +48,11 @@ export const ChannelPermissionOverwriteRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ChannelPermissionOverwriteRequest$ {
-    /** @deprecated use `ChannelPermissionOverwriteRequest$inboundSchema` instead. */
-    export const inboundSchema = ChannelPermissionOverwriteRequest$inboundSchema;
-    /** @deprecated use `ChannelPermissionOverwriteRequest$outboundSchema` instead. */
-    export const outboundSchema = ChannelPermissionOverwriteRequest$outboundSchema;
-    /** @deprecated use `ChannelPermissionOverwriteRequest$Outbound` instead. */
-    export type Outbound = ChannelPermissionOverwriteRequest$Outbound;
+  /** @deprecated use `ChannelPermissionOverwriteRequest$inboundSchema` instead. */
+  export const inboundSchema = ChannelPermissionOverwriteRequest$inboundSchema;
+  /** @deprecated use `ChannelPermissionOverwriteRequest$outboundSchema` instead. */
+  export const outboundSchema =
+    ChannelPermissionOverwriteRequest$outboundSchema;
+  /** @deprecated use `ChannelPermissionOverwriteRequest$Outbound` instead. */
+  export type Outbound = ChannelPermissionOverwriteRequest$Outbound;
 }

@@ -6,7 +6,7 @@
 import { ListMessagesRequest } from "@speakeasy-sdks/discord/models/operations";
 
 let value: ListMessagesRequest = {
-    channelId: "<value>",
+  channelId: "<value>",
 };
 ```
 

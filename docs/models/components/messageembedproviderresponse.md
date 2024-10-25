@@ -6,7 +6,7 @@
 import { MessageEmbedProviderResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageEmbedProviderResponse = {
-    name: "<value>",
+  name: "<value>",
 };
 ```
 

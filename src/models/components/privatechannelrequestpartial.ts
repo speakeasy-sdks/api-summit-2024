@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type PrivateChannelRequestPartial = {
-    name?: string | null | undefined;
-    icon?: string | null | undefined;
+  name?: string | null | undefined;
+  icon?: string | null | undefined;
 };
 
 /** @internal */
 export const PrivateChannelRequestPartial$inboundSchema: z.ZodType<
-    PrivateChannelRequestPartial,
-    z.ZodTypeDef,
-    unknown
+  PrivateChannelRequestPartial,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    name: z.nullable(z.string()).optional(),
-    icon: z.nullable(z.string()).optional(),
+  name: z.nullable(z.string()).optional(),
+  icon: z.nullable(z.string()).optional(),
 });
 
 /** @internal */
 export type PrivateChannelRequestPartial$Outbound = {
-    name?: string | null | undefined;
-    icon?: string | null | undefined;
+  name?: string | null | undefined;
+  icon?: string | null | undefined;
 };
 
 /** @internal */
 export const PrivateChannelRequestPartial$outboundSchema: z.ZodType<
-    PrivateChannelRequestPartial$Outbound,
-    z.ZodTypeDef,
-    PrivateChannelRequestPartial
+  PrivateChannelRequestPartial$Outbound,
+  z.ZodTypeDef,
+  PrivateChannelRequestPartial
 > = z.object({
-    name: z.nullable(z.string()).optional(),
-    icon: z.nullable(z.string()).optional(),
+  name: z.nullable(z.string()).optional(),
+  icon: z.nullable(z.string()).optional(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const PrivateChannelRequestPartial$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace PrivateChannelRequestPartial$ {
-    /** @deprecated use `PrivateChannelRequestPartial$inboundSchema` instead. */
-    export const inboundSchema = PrivateChannelRequestPartial$inboundSchema;
-    /** @deprecated use `PrivateChannelRequestPartial$outboundSchema` instead. */
-    export const outboundSchema = PrivateChannelRequestPartial$outboundSchema;
-    /** @deprecated use `PrivateChannelRequestPartial$Outbound` instead. */
-    export type Outbound = PrivateChannelRequestPartial$Outbound;
+  /** @deprecated use `PrivateChannelRequestPartial$inboundSchema` instead. */
+  export const inboundSchema = PrivateChannelRequestPartial$inboundSchema;
+  /** @deprecated use `PrivateChannelRequestPartial$outboundSchema` instead. */
+  export const outboundSchema = PrivateChannelRequestPartial$outboundSchema;
+  /** @deprecated use `PrivateChannelRequestPartial$Outbound` instead. */
+  export type Outbound = PrivateChannelRequestPartial$Outbound;
 }

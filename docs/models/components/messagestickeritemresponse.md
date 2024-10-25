@@ -6,8 +6,8 @@
 import { MessageStickerItemResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageStickerItemResponse = {
-    id: "<value>",
-    name: "<value>",
+  id: "<value>",
+  name: "<value>",
 };
 ```
 

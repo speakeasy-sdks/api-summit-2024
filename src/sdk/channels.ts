@@ -10,24 +10,36 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Channels extends ClientSDK {
-    async get(
-        request: operations.GetChannelRequest,
-        options?: RequestOptions
-    ): Promise<operations.GetChannelResponseBody> {
-        return unwrapAsync(channelsGet(this, request, options));
-    }
+  async get(
+    request: operations.GetChannelRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetChannelResponseBody> {
+    return unwrapAsync(channelsGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    async delete(
-        request: operations.DeleteChannelRequest,
-        options?: RequestOptions
-    ): Promise<operations.DeleteChannelResponseBody> {
-        return unwrapAsync(channelsDelete(this, request, options));
-    }
+  async delete(
+    request: operations.DeleteChannelRequest,
+    options?: RequestOptions,
+  ): Promise<operations.DeleteChannelResponseBody> {
+    return unwrapAsync(channelsDelete(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    async update(
-        request: operations.UpdateChannelRequest,
-        options?: RequestOptions
-    ): Promise<operations.UpdateChannelResponseBody> {
-        return unwrapAsync(channelsUpdate(this, request, options));
-    }
+  async update(
+    request: operations.UpdateChannelRequest,
+    options?: RequestOptions,
+  ): Promise<operations.UpdateChannelResponseBody> {
+    return unwrapAsync(channelsUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 }

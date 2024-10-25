@@ -6,11 +6,11 @@
 import { InviteApplicationResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: InviteApplicationResponse = {
-    id: "<value>",
-    name: "<value>",
-    description: "Cross-platform executive encoding",
-    verifyKey: "<value>",
-    flags: 480894,
+  id: "<value>",
+  name: "<value>",
+  description: "behind gah runny vanish sugary woot after drat afore octave",
+  verifyKey: "<value>",
+  flags: 974257,
 };
 ```
 

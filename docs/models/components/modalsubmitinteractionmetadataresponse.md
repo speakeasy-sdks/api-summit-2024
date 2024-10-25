@@ -6,17 +6,17 @@
 import { ModalSubmitInteractionMetadataResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ModalSubmitInteractionMetadataResponse = {
+  id: "<value>",
+  authorizingIntegrationOwners: {
+    "key": "<value>",
+  },
+  triggeringInteractionMetadata: {
     id: "<value>",
     authorizingIntegrationOwners: {
-        key: "<value>",
+      "key": "<value>",
     },
-    triggeringInteractionMetadata: {
-        id: "<value>",
-        authorizingIntegrationOwners: {
-            key: "<value>",
-        },
-        interactedMessageId: "<value>",
-    },
+    interactedMessageId: "<value>",
+  },
 };
 ```
 

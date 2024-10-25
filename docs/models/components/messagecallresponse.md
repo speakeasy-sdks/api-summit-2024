@@ -6,7 +6,9 @@
 import { MessageCallResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageCallResponse = {
-    participants: ["<value>"],
+  participants: [
+    "<value>",
+  ],
 };
 ```
 

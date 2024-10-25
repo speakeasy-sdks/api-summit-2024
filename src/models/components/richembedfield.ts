@@ -5,35 +5,38 @@
 import * as z from "zod";
 
 export type RichEmbedField = {
-    name: string;
-    value: string;
-    inline?: boolean | null | undefined;
+  name: string;
+  value: string;
+  inline?: boolean | null | undefined;
 };
 
 /** @internal */
-export const RichEmbedField$inboundSchema: z.ZodType<RichEmbedField, z.ZodTypeDef, unknown> =
-    z.object({
-        name: z.string(),
-        value: z.string(),
-        inline: z.nullable(z.boolean()).optional(),
-    });
+export const RichEmbedField$inboundSchema: z.ZodType<
+  RichEmbedField,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  name: z.string(),
+  value: z.string(),
+  inline: z.nullable(z.boolean()).optional(),
+});
 
 /** @internal */
 export type RichEmbedField$Outbound = {
-    name: string;
-    value: string;
-    inline?: boolean | null | undefined;
+  name: string;
+  value: string;
+  inline?: boolean | null | undefined;
 };
 
 /** @internal */
 export const RichEmbedField$outboundSchema: z.ZodType<
-    RichEmbedField$Outbound,
-    z.ZodTypeDef,
-    RichEmbedField
+  RichEmbedField$Outbound,
+  z.ZodTypeDef,
+  RichEmbedField
 > = z.object({
-    name: z.string(),
-    value: z.string(),
-    inline: z.nullable(z.boolean()).optional(),
+  name: z.string(),
+  value: z.string(),
+  inline: z.nullable(z.boolean()).optional(),
 });
 
 /**
@@ -41,10 +44,10 @@ export const RichEmbedField$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace RichEmbedField$ {
-    /** @deprecated use `RichEmbedField$inboundSchema` instead. */
-    export const inboundSchema = RichEmbedField$inboundSchema;
-    /** @deprecated use `RichEmbedField$outboundSchema` instead. */
-    export const outboundSchema = RichEmbedField$outboundSchema;
-    /** @deprecated use `RichEmbedField$Outbound` instead. */
-    export type Outbound = RichEmbedField$Outbound;
+  /** @deprecated use `RichEmbedField$inboundSchema` instead. */
+  export const inboundSchema = RichEmbedField$inboundSchema;
+  /** @deprecated use `RichEmbedField$outboundSchema` instead. */
+  export const outboundSchema = RichEmbedField$outboundSchema;
+  /** @deprecated use `RichEmbedField$Outbound` instead. */
+  export type Outbound = RichEmbedField$Outbound;
 }

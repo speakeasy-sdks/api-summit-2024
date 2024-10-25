@@ -6,7 +6,7 @@
 import { MentionableSelect } from "@speakeasy-sdks/discord/models/components";
 
 let value: MentionableSelect = {
-    customId: "<value>",
+  customId: "<id>",
 };
 ```
 

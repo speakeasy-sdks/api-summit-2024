@@ -5,34 +5,34 @@
 import * as z from "zod";
 
 export type UserSelectDefaultValue = {
-    type?: "user" | undefined;
-    id: string;
+  type?: "user" | undefined;
+  id: string;
 };
 
 /** @internal */
 export const UserSelectDefaultValue$inboundSchema: z.ZodType<
-    UserSelectDefaultValue,
-    z.ZodTypeDef,
-    unknown
+  UserSelectDefaultValue,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    type: z.literal("user").optional(),
-    id: z.string(),
+  type: z.literal("user").optional(),
+  id: z.string(),
 });
 
 /** @internal */
 export type UserSelectDefaultValue$Outbound = {
-    type: "user";
-    id: string;
+  type: "user";
+  id: string;
 };
 
 /** @internal */
 export const UserSelectDefaultValue$outboundSchema: z.ZodType<
-    UserSelectDefaultValue$Outbound,
-    z.ZodTypeDef,
-    UserSelectDefaultValue
+  UserSelectDefaultValue$Outbound,
+  z.ZodTypeDef,
+  UserSelectDefaultValue
 > = z.object({
-    type: z.literal("user").default("user" as const),
-    id: z.string(),
+  type: z.literal("user").default("user" as const),
+  id: z.string(),
 });
 
 /**
@@ -40,10 +40,10 @@ export const UserSelectDefaultValue$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace UserSelectDefaultValue$ {
-    /** @deprecated use `UserSelectDefaultValue$inboundSchema` instead. */
-    export const inboundSchema = UserSelectDefaultValue$inboundSchema;
-    /** @deprecated use `UserSelectDefaultValue$outboundSchema` instead. */
-    export const outboundSchema = UserSelectDefaultValue$outboundSchema;
-    /** @deprecated use `UserSelectDefaultValue$Outbound` instead. */
-    export type Outbound = UserSelectDefaultValue$Outbound;
+  /** @deprecated use `UserSelectDefaultValue$inboundSchema` instead. */
+  export const inboundSchema = UserSelectDefaultValue$inboundSchema;
+  /** @deprecated use `UserSelectDefaultValue$outboundSchema` instead. */
+  export const outboundSchema = UserSelectDefaultValue$outboundSchema;
+  /** @deprecated use `UserSelectDefaultValue$Outbound` instead. */
+  export type Outbound = UserSelectDefaultValue$Outbound;
 }

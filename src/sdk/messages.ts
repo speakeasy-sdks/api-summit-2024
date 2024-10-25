@@ -13,38 +13,58 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Messages extends ClientSDK {
-    async get(
-        request: operations.GetMessageRequest,
-        options?: RequestOptions
-    ): Promise<components.MessageResponse> {
-        return unwrapAsync(messagesGet(this, request, options));
-    }
+  async get(
+    request: operations.GetMessageRequest,
+    options?: RequestOptions,
+  ): Promise<components.MessageResponse> {
+    return unwrapAsync(messagesGet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    async delete(
-        request: operations.DeleteMessageRequest,
-        options?: RequestOptions
-    ): Promise<void> {
-        return unwrapAsync(messagesDelete(this, request, options));
-    }
+  async delete(
+    request: operations.DeleteMessageRequest,
+    options?: RequestOptions,
+  ): Promise<void> {
+    return unwrapAsync(messagesDelete(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    async update(
-        request: operations.UpdateMessageRequest,
-        options?: RequestOptions
-    ): Promise<components.MessageResponse> {
-        return unwrapAsync(messagesUpdate(this, request, options));
-    }
+  async update(
+    request: operations.UpdateMessageRequest,
+    options?: RequestOptions,
+  ): Promise<components.MessageResponse> {
+    return unwrapAsync(messagesUpdate(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    async list(
-        request: operations.ListMessagesRequest,
-        options?: RequestOptions
-    ): Promise<Array<components.MessageResponse>> {
-        return unwrapAsync(messagesList(this, request, options));
-    }
+  async list(
+    request: operations.ListMessagesRequest,
+    options?: RequestOptions,
+  ): Promise<Array<components.MessageResponse>> {
+    return unwrapAsync(messagesList(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    async create(
-        request: operations.CreateMessageRequest,
-        options?: RequestOptions
-    ): Promise<components.MessageResponse> {
-        return unwrapAsync(messagesCreate(this, request, options));
-    }
+  async create(
+    request: operations.CreateMessageRequest,
+    options?: RequestOptions,
+  ): Promise<components.MessageResponse> {
+    return unwrapAsync(messagesCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 }

@@ -5,30 +5,30 @@
 import * as z from "zod";
 
 export type InviteChannelRecipientResponse = {
-    username: string;
+  username: string;
 };
 
 /** @internal */
 export const InviteChannelRecipientResponse$inboundSchema: z.ZodType<
-    InviteChannelRecipientResponse,
-    z.ZodTypeDef,
-    unknown
+  InviteChannelRecipientResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    username: z.string(),
+  username: z.string(),
 });
 
 /** @internal */
 export type InviteChannelRecipientResponse$Outbound = {
-    username: string;
+  username: string;
 };
 
 /** @internal */
 export const InviteChannelRecipientResponse$outboundSchema: z.ZodType<
-    InviteChannelRecipientResponse$Outbound,
-    z.ZodTypeDef,
-    InviteChannelRecipientResponse
+  InviteChannelRecipientResponse$Outbound,
+  z.ZodTypeDef,
+  InviteChannelRecipientResponse
 > = z.object({
-    username: z.string(),
+  username: z.string(),
 });
 
 /**
@@ -36,10 +36,10 @@ export const InviteChannelRecipientResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace InviteChannelRecipientResponse$ {
-    /** @deprecated use `InviteChannelRecipientResponse$inboundSchema` instead. */
-    export const inboundSchema = InviteChannelRecipientResponse$inboundSchema;
-    /** @deprecated use `InviteChannelRecipientResponse$outboundSchema` instead. */
-    export const outboundSchema = InviteChannelRecipientResponse$outboundSchema;
-    /** @deprecated use `InviteChannelRecipientResponse$Outbound` instead. */
-    export type Outbound = InviteChannelRecipientResponse$Outbound;
+  /** @deprecated use `InviteChannelRecipientResponse$inboundSchema` instead. */
+  export const inboundSchema = InviteChannelRecipientResponse$inboundSchema;
+  /** @deprecated use `InviteChannelRecipientResponse$outboundSchema` instead. */
+  export const outboundSchema = InviteChannelRecipientResponse$outboundSchema;
+  /** @deprecated use `InviteChannelRecipientResponse$Outbound` instead. */
+  export type Outbound = InviteChannelRecipientResponse$Outbound;
 }

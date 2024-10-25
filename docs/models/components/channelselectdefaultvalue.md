@@ -6,7 +6,7 @@
 import { ChannelSelectDefaultValue } from "@speakeasy-sdks/discord/models/components";
 
 let value: ChannelSelectDefaultValue = {
-    id: "<value>",
+  id: "<value>",
 };
 ```
 

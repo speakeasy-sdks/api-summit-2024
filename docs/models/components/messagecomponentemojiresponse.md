@@ -6,7 +6,7 @@
 import { MessageComponentEmojiResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageComponentEmojiResponse = {
-    name: "<value>",
+  name: "<value>",
 };
 ```
 

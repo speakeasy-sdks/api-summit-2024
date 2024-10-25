@@ -6,8 +6,8 @@
 import { MessageReactionCountDetailsResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageReactionCountDetailsResponse = {
-    burst: 96098,
-    normal: 971945,
+  burst: 696997,
+  normal: 778696,
 };
 ```
 

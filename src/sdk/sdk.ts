@@ -9,23 +9,23 @@ import { Messages } from "./messages.js";
 import { Threads } from "./threads.js";
 
 export class Discord extends ClientSDK {
-    private _messages?: Messages;
-    get messages(): Messages {
-        return (this._messages ??= new Messages(this.options$));
-    }
+  private _messages?: Messages;
+  get messages(): Messages {
+    return (this._messages ??= new Messages(this._options));
+  }
 
-    private _channelInvites?: ChannelInvites;
-    get channelInvites(): ChannelInvites {
-        return (this._channelInvites ??= new ChannelInvites(this.options$));
-    }
+  private _channelInvites?: ChannelInvites;
+  get channelInvites(): ChannelInvites {
+    return (this._channelInvites ??= new ChannelInvites(this._options));
+  }
 
-    private _threads?: Threads;
-    get threads(): Threads {
-        return (this._threads ??= new Threads(this.options$));
-    }
+  private _threads?: Threads;
+  get threads(): Threads {
+    return (this._threads ??= new Threads(this._options));
+  }
 
-    private _channels?: Channels;
-    get channels(): Channels {
-        return (this._channels ??= new Channels(this.options$));
-    }
+  private _channels?: Channels;
+  get channels(): Channels {
+    return (this._channels ??= new Channels(this._options));
+  }
 }

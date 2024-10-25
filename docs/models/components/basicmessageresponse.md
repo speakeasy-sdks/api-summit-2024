@@ -6,34 +6,53 @@
 import { BasicMessageResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: BasicMessageResponse = {
-    content: "<value>",
-    mentions: [
-        {
-            id: "<value>",
-            username: "Tianna33",
-            discriminator: "<value>",
-            publicFlags: 87129,
-            flags: 648172,
-        },
-    ],
-    mentionRoles: ["<value>"],
-    attachments: [],
-    embeds: [],
-    timestamp: new Date("2022-01-23T03:49:29.173Z"),
-    flags: 368241,
-    components: [],
-    id: "<value>",
-    channelId: "<value>",
-    author: {
-        id: "<value>",
-        username: "Rita.Will87",
-        discriminator: "<value>",
-        publicFlags: 870088,
-        flags: 978619,
+  content: "<value>",
+  mentions: [
+    {
+      id: "<value>",
+      username: "Ibrahim.Brakus-Durgan65",
+      discriminator: "<value>",
+      publicFlags: 466311,
+      flags: 244425,
     },
-    pinned: false,
-    mentionEveryone: false,
-    tts: false,
+  ],
+  mentionRoles: [
+    "<value>",
+  ],
+  attachments: [
+    {
+      id: "<value>",
+      filename: "example.file",
+      size: 158969,
+      url: "https://querulous-chap.biz/",
+      proxyUrl: "https://sugary-brace.org/",
+    },
+  ],
+  embeds: [
+    {
+      type: "<value>",
+    },
+  ],
+  timestamp: new Date("2022-04-16T07:46:21.076Z"),
+  flags: 976460,
+  components: [
+    {
+      id: 976762,
+      customId: "<id>",
+    },
+  ],
+  id: "<value>",
+  channelId: "<value>",
+  author: {
+    id: "<value>",
+    username: "Lelah.Batz12",
+    discriminator: "<value>",
+    publicFlags: 118727,
+    flags: 317983,
+  },
+  pinned: false,
+  mentionEveryone: false,
+  tts: false,
 };
 ```
 

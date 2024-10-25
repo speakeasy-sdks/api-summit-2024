@@ -57,3 +57,13 @@ Based on:
 - [typescript v1.2.1] .
 ### Releases
 - [NPM v1.2.1] https://www.npmjs.com/package/@speakeasy-sdks/discord/v/1.2.1 - .
+
+## 2024-10-25 00:24:18
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.421.2 (2.438.15) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v1.3.0] .
+### Releases
+- [NPM v1.3.0] https://www.npmjs.com/package/@speakeasy-sdks/discord/v/1.3.0 - .

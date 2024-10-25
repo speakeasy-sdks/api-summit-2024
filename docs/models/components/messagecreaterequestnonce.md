@@ -1,24 +1,17 @@
 # MessageCreateRequestNonce
 
-## Example Usage
-
-```typescript
-import { MessageCreateRequestNonce } from "@speakeasy-sdks/discord/models/components";
-
-let value: MessageCreateRequestNonce = "<value>";
-```
 
 ## Supported Types
 
 ### `number`
 
 ```typescript
-const value: number = /* values here */
+const value: number = 272822;
 ```
 
 ### `string`
 
 ```typescript
-const value: string = /* values here */
+const value: string = "<value>";
 ```
 

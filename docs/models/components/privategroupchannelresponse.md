@@ -6,17 +6,17 @@
 import { PrivateGroupChannelResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: PrivateGroupChannelResponse = {
-    id: "<value>",
-    flags: 958950,
-    recipients: [
-        {
-            id: "<value>",
-            username: "Bart63",
-            discriminator: "<value>",
-            publicFlags: 161309,
-            flags: 995300,
-        },
-    ],
+  id: "<value>",
+  flags: 952792,
+  recipients: [
+    {
+      id: "<value>",
+      username: "Marshall_White25",
+      discriminator: "<value>",
+      publicFlags: 518201,
+      flags: 25662,
+    },
+  ],
 };
 ```
 

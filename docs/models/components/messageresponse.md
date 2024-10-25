@@ -6,34 +6,53 @@
 import { MessageResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageResponse = {
-    content: "<value>",
-    mentions: [
-        {
-            id: "<value>",
-            username: "Roselyn_Kassulke",
-            discriminator: "<value>",
-            publicFlags: 384382,
-            flags: 437587,
-        },
-    ],
-    mentionRoles: ["<value>"],
-    attachments: [],
-    embeds: [],
-    timestamp: new Date("2022-11-23T02:21:00.924Z"),
-    flags: 891773,
-    components: [],
-    id: "<value>",
-    channelId: "<value>",
-    author: {
-        id: "<value>",
-        username: "Anahi38",
-        discriminator: "<value>",
-        publicFlags: 477665,
-        flags: 791725,
+  content: "<value>",
+  mentions: [
+    {
+      id: "<value>",
+      username: "Junior.Walsh8",
+      discriminator: "<value>",
+      publicFlags: 832620,
+      flags: 778157,
     },
-    pinned: false,
-    mentionEveryone: false,
-    tts: false,
+  ],
+  mentionRoles: [
+    "<value>",
+  ],
+  attachments: [
+    {
+      id: "<value>",
+      filename: "example.file",
+      size: 870013,
+      url: "https://steep-independence.net",
+      proxyUrl: "https://productive-charm.org/",
+    },
+  ],
+  embeds: [
+    {
+      type: "<value>",
+    },
+  ],
+  timestamp: new Date("2023-07-26T22:41:53.719Z"),
+  flags: 414662,
+  components: [
+    {
+      id: 774234,
+      customId: "<id>",
+    },
+  ],
+  id: "<value>",
+  channelId: "<value>",
+  author: {
+    id: "<value>",
+    username: "Jacky_Auer",
+    discriminator: "<value>",
+    publicFlags: 943749,
+    flags: 681820,
+  },
+  pinned: false,
+  mentionEveryone: false,
+  tts: false,
 };
 ```
 

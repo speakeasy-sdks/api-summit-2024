@@ -6,7 +6,7 @@
 import { MessageEmbedFooterResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageEmbedFooterResponse = {
-    text: "<value>",
+  text: "<value>",
 };
 ```
 
