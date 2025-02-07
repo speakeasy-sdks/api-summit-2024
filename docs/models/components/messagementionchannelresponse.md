@@ -6,9 +6,9 @@
 import { MessageMentionChannelResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageMentionChannelResponse = {
-    id: "<value>",
-    name: "<value>",
-    guildId: "<value>",
+  id: "<value>",
+  name: "<value>",
+  guildId: "<value>",
 };
 ```
 

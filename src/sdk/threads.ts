@@ -9,10 +9,14 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Threads extends ClientSDK {
-    async create(
-        request: operations.CreateThreadRequest,
-        options?: RequestOptions
-    ): Promise<components.CreatedThreadResponse> {
-        return unwrapAsync(threadsCreate(this, request, options));
-    }
+  async create(
+    request: operations.CreateThreadRequest,
+    options?: RequestOptions,
+  ): Promise<components.CreatedThreadResponse> {
+    return unwrapAsync(threadsCreate(
+      this,
+      request,
+      options,
+    ));
+  }
 }

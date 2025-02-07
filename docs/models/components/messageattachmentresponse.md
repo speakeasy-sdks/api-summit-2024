@@ -6,11 +6,11 @@
 import { MessageAttachmentResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageAttachmentResponse = {
-    id: "<value>",
-    filename: "your_file_here",
-    size: 110375,
-    url: "https://profuse-ethernet.com",
-    proxyUrl: "https://dimwitted-vaulting.info",
+  id: "<value>",
+  filename: "example.file",
+  size: 488056,
+  url: "https://wasteful-roundabout.net/",
+  proxyUrl: "https://bouncy-marketplace.name",
 };
 ```
 

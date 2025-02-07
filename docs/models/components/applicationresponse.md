@@ -6,11 +6,12 @@
 import { ApplicationResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ApplicationResponse = {
-    id: "<value>",
-    name: "<value>",
-    description: "Programmable secondary access",
-    verifyKey: "<value>",
-    flags: 97101,
+  id: "<value>",
+  name: "<value>",
+  description:
+    "ack flame turbulent westernize apud testing phooey restfully circulate emphasize",
+  verifyKey: "<value>",
+  flags: 379927,
 };
 ```
 

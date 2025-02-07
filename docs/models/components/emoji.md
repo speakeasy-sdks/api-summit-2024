@@ -6,7 +6,7 @@
 import { Emoji } from "@speakeasy-sdks/discord/models/components";
 
 let value: Emoji = {
-    name: "<value>",
+  name: "<value>",
 };
 ```
 

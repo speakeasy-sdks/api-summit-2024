@@ -6,7 +6,7 @@
 import { ChannelPermissionOverwriteRequest } from "@speakeasy-sdks/discord/models/components";
 
 let value: ChannelPermissionOverwriteRequest = {
-    id: "<value>",
+  id: "<value>",
 };
 ```
 

@@ -3,35 +3,70 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type ApplicationIntegrationTypeConfigurationResponse = {};
 
 /** @internal */
-export const ApplicationIntegrationTypeConfigurationResponse$inboundSchema: z.ZodType<
+export const ApplicationIntegrationTypeConfigurationResponse$inboundSchema:
+  z.ZodType<
     ApplicationIntegrationTypeConfigurationResponse,
     z.ZodTypeDef,
     unknown
-> = z.object({});
+  > = z.object({});
 
 /** @internal */
 export type ApplicationIntegrationTypeConfigurationResponse$Outbound = {};
 
 /** @internal */
-export const ApplicationIntegrationTypeConfigurationResponse$outboundSchema: z.ZodType<
+export const ApplicationIntegrationTypeConfigurationResponse$outboundSchema:
+  z.ZodType<
     ApplicationIntegrationTypeConfigurationResponse$Outbound,
     z.ZodTypeDef,
     ApplicationIntegrationTypeConfigurationResponse
-> = z.object({});
+  > = z.object({});
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ApplicationIntegrationTypeConfigurationResponse$ {
-    /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$inboundSchema` instead. */
-    export const inboundSchema = ApplicationIntegrationTypeConfigurationResponse$inboundSchema;
-    /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$outboundSchema` instead. */
-    export const outboundSchema = ApplicationIntegrationTypeConfigurationResponse$outboundSchema;
-    /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$Outbound` instead. */
-    export type Outbound = ApplicationIntegrationTypeConfigurationResponse$Outbound;
+  /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$inboundSchema` instead. */
+  export const inboundSchema =
+    ApplicationIntegrationTypeConfigurationResponse$inboundSchema;
+  /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$outboundSchema` instead. */
+  export const outboundSchema =
+    ApplicationIntegrationTypeConfigurationResponse$outboundSchema;
+  /** @deprecated use `ApplicationIntegrationTypeConfigurationResponse$Outbound` instead. */
+  export type Outbound =
+    ApplicationIntegrationTypeConfigurationResponse$Outbound;
+}
+
+export function applicationIntegrationTypeConfigurationResponseToJSON(
+  applicationIntegrationTypeConfigurationResponse:
+    ApplicationIntegrationTypeConfigurationResponse,
+): string {
+  return JSON.stringify(
+    ApplicationIntegrationTypeConfigurationResponse$outboundSchema.parse(
+      applicationIntegrationTypeConfigurationResponse,
+    ),
+  );
+}
+
+export function applicationIntegrationTypeConfigurationResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  ApplicationIntegrationTypeConfigurationResponse,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      ApplicationIntegrationTypeConfigurationResponse$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'ApplicationIntegrationTypeConfigurationResponse' from JSON`,
+  );
 }

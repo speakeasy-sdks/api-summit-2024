@@ -6,11 +6,11 @@
 import { UserResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: UserResponse = {
-    id: "<value>",
-    username: "Jaren.Schmidt52",
-    discriminator: "<value>",
-    publicFlags: 780529,
-    flags: 678880,
+  id: "<value>",
+  username: "Harry_Pouros",
+  discriminator: "<value>",
+  publicFlags: 93940,
+  flags: 575947,
 };
 ```
 

@@ -3,14 +3,17 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type MessageActivityResponse = {};
 
 /** @internal */
 export const MessageActivityResponse$inboundSchema: z.ZodType<
-    MessageActivityResponse,
-    z.ZodTypeDef,
-    unknown
+  MessageActivityResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({});
 
 /** @internal */
@@ -18,9 +21,9 @@ export type MessageActivityResponse$Outbound = {};
 
 /** @internal */
 export const MessageActivityResponse$outboundSchema: z.ZodType<
-    MessageActivityResponse$Outbound,
-    z.ZodTypeDef,
-    MessageActivityResponse
+  MessageActivityResponse$Outbound,
+  z.ZodTypeDef,
+  MessageActivityResponse
 > = z.object({});
 
 /**
@@ -28,10 +31,28 @@ export const MessageActivityResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace MessageActivityResponse$ {
-    /** @deprecated use `MessageActivityResponse$inboundSchema` instead. */
-    export const inboundSchema = MessageActivityResponse$inboundSchema;
-    /** @deprecated use `MessageActivityResponse$outboundSchema` instead. */
-    export const outboundSchema = MessageActivityResponse$outboundSchema;
-    /** @deprecated use `MessageActivityResponse$Outbound` instead. */
-    export type Outbound = MessageActivityResponse$Outbound;
+  /** @deprecated use `MessageActivityResponse$inboundSchema` instead. */
+  export const inboundSchema = MessageActivityResponse$inboundSchema;
+  /** @deprecated use `MessageActivityResponse$outboundSchema` instead. */
+  export const outboundSchema = MessageActivityResponse$outboundSchema;
+  /** @deprecated use `MessageActivityResponse$Outbound` instead. */
+  export type Outbound = MessageActivityResponse$Outbound;
+}
+
+export function messageActivityResponseToJSON(
+  messageActivityResponse: MessageActivityResponse,
+): string {
+  return JSON.stringify(
+    MessageActivityResponse$outboundSchema.parse(messageActivityResponse),
+  );
+}
+
+export function messageActivityResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<MessageActivityResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MessageActivityResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MessageActivityResponse' from JSON`,
+  );
 }

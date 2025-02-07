@@ -6,8 +6,8 @@
 import { CreateForumThreadRequest } from "@speakeasy-sdks/discord/models/components";
 
 let value: CreateForumThreadRequest = {
-    name: "<value>",
-    message: {},
+  name: "<value>",
+  message: {},
 };
 ```
 

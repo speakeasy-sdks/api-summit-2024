@@ -6,14 +6,14 @@
 import { CreatedThreadResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: CreatedThreadResponse = {
-    id: "<value>",
-    flags: 118727,
-    guildId: "<value>",
-    name: "<value>",
-    ownerId: "<value>",
-    messageCount: 688661,
-    memberCount: 317983,
-    totalMessageSent: 880476,
+  id: "<value>",
+  flags: 185232,
+  guildId: "<value>",
+  name: "<value>",
+  ownerId: "<value>",
+  messageCount: 401259,
+  memberCount: 929292,
+  totalMessageSent: 99615,
 };
 ```
 

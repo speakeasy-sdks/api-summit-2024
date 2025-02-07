@@ -1,30 +1,23 @@
 # UpdateChannelRequestBody
 
-## Example Usage
-
-```typescript
-import { UpdateChannelRequestBody } from "@speakeasy-sdks/discord/models/operations";
-
-let value: UpdateChannelRequestBody = {};
-```
 
 ## Supported Types
 
 ### `components.PrivateChannelRequestPartial`
 
 ```typescript
-const value: components.PrivateChannelRequestPartial = /* values here */
+const value: components.PrivateChannelRequestPartial = {};
 ```
 
 ### `components.UpdateGuildChannelRequestPartial`
 
 ```typescript
-const value: components.UpdateGuildChannelRequestPartial = /* values here */
+const value: components.UpdateGuildChannelRequestPartial = {};
 ```
 
 ### `components.UpdateThreadRequestPartial`
 
 ```typescript
-const value: components.UpdateThreadRequestPartial = /* values here */
+const value: components.UpdateThreadRequestPartial = {};
 ```
 

@@ -6,8 +6,8 @@
 import { GuildProductPurchaseResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: GuildProductPurchaseResponse = {
-    listingId: "<value>",
-    productName: "<value>",
+  listingId: "<value>",
+  productName: "<value>",
 };
 ```
 

@@ -6,7 +6,7 @@
 import { RecurrenceRuleResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: RecurrenceRuleResponse = {
-    start: new Date("2022-11-06T22:57:15.343Z"),
+  start: new Date("2024-07-22T15:26:23.118Z"),
 };
 ```
 

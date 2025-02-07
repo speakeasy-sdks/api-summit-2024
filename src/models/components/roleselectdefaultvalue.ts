@@ -3,36 +3,39 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type RoleSelectDefaultValue = {
-    type?: "user" | undefined;
-    id: string;
+  type?: "user" | undefined;
+  id: string;
 };
 
 /** @internal */
 export const RoleSelectDefaultValue$inboundSchema: z.ZodType<
-    RoleSelectDefaultValue,
-    z.ZodTypeDef,
-    unknown
+  RoleSelectDefaultValue,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    type: z.literal("user").optional(),
-    id: z.string(),
+  type: z.literal("user").optional(),
+  id: z.string(),
 });
 
 /** @internal */
 export type RoleSelectDefaultValue$Outbound = {
-    type: "user";
-    id: string;
+  type: "user";
+  id: string;
 };
 
 /** @internal */
 export const RoleSelectDefaultValue$outboundSchema: z.ZodType<
-    RoleSelectDefaultValue$Outbound,
-    z.ZodTypeDef,
-    RoleSelectDefaultValue
+  RoleSelectDefaultValue$Outbound,
+  z.ZodTypeDef,
+  RoleSelectDefaultValue
 > = z.object({
-    type: z.literal("user").default("user" as const),
-    id: z.string(),
+  type: z.literal("user").default("user" as const),
+  id: z.string(),
 });
 
 /**
@@ -40,10 +43,28 @@ export const RoleSelectDefaultValue$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace RoleSelectDefaultValue$ {
-    /** @deprecated use `RoleSelectDefaultValue$inboundSchema` instead. */
-    export const inboundSchema = RoleSelectDefaultValue$inboundSchema;
-    /** @deprecated use `RoleSelectDefaultValue$outboundSchema` instead. */
-    export const outboundSchema = RoleSelectDefaultValue$outboundSchema;
-    /** @deprecated use `RoleSelectDefaultValue$Outbound` instead. */
-    export type Outbound = RoleSelectDefaultValue$Outbound;
+  /** @deprecated use `RoleSelectDefaultValue$inboundSchema` instead. */
+  export const inboundSchema = RoleSelectDefaultValue$inboundSchema;
+  /** @deprecated use `RoleSelectDefaultValue$outboundSchema` instead. */
+  export const outboundSchema = RoleSelectDefaultValue$outboundSchema;
+  /** @deprecated use `RoleSelectDefaultValue$Outbound` instead. */
+  export type Outbound = RoleSelectDefaultValue$Outbound;
+}
+
+export function roleSelectDefaultValueToJSON(
+  roleSelectDefaultValue: RoleSelectDefaultValue,
+): string {
+  return JSON.stringify(
+    RoleSelectDefaultValue$outboundSchema.parse(roleSelectDefaultValue),
+  );
+}
+
+export function roleSelectDefaultValueFromJSON(
+  jsonString: string,
+): SafeParseResult<RoleSelectDefaultValue, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RoleSelectDefaultValue$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RoleSelectDefaultValue' from JSON`,
+  );
 }

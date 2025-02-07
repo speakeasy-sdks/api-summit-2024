@@ -6,10 +6,10 @@
 import { ScheduledEventResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: ScheduledEventResponse = {
-    id: "<value>",
-    guildId: "<value>",
-    name: "<value>",
-    scheduledStartTime: new Date("2023-04-30T02:45:50.682Z"),
+  id: "<value>",
+  guildId: "<value>",
+  name: "<value>",
+  scheduledStartTime: new Date("2023-03-26T08:15:44.573Z"),
 };
 ```
 

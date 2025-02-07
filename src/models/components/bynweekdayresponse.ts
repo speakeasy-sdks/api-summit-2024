@@ -3,36 +3,39 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type ByNWeekdayResponse = {
-    n: number;
-    day?: 0 | undefined;
+  n: number;
+  day?: 0 | undefined;
 };
 
 /** @internal */
 export const ByNWeekdayResponse$inboundSchema: z.ZodType<
-    ByNWeekdayResponse,
-    z.ZodTypeDef,
-    unknown
+  ByNWeekdayResponse,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    n: z.number().int(),
-    day: z.literal(0).optional(),
+  n: z.number().int(),
+  day: z.literal(0).optional(),
 });
 
 /** @internal */
 export type ByNWeekdayResponse$Outbound = {
-    n: number;
-    day: 0;
+  n: number;
+  day: 0;
 };
 
 /** @internal */
 export const ByNWeekdayResponse$outboundSchema: z.ZodType<
-    ByNWeekdayResponse$Outbound,
-    z.ZodTypeDef,
-    ByNWeekdayResponse
+  ByNWeekdayResponse$Outbound,
+  z.ZodTypeDef,
+  ByNWeekdayResponse
 > = z.object({
-    n: z.number().int(),
-    day: z.literal(0).default(0 as const),
+  n: z.number().int(),
+  day: z.literal(0).default(0 as const),
 });
 
 /**
@@ -40,10 +43,28 @@ export const ByNWeekdayResponse$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ByNWeekdayResponse$ {
-    /** @deprecated use `ByNWeekdayResponse$inboundSchema` instead. */
-    export const inboundSchema = ByNWeekdayResponse$inboundSchema;
-    /** @deprecated use `ByNWeekdayResponse$outboundSchema` instead. */
-    export const outboundSchema = ByNWeekdayResponse$outboundSchema;
-    /** @deprecated use `ByNWeekdayResponse$Outbound` instead. */
-    export type Outbound = ByNWeekdayResponse$Outbound;
+  /** @deprecated use `ByNWeekdayResponse$inboundSchema` instead. */
+  export const inboundSchema = ByNWeekdayResponse$inboundSchema;
+  /** @deprecated use `ByNWeekdayResponse$outboundSchema` instead. */
+  export const outboundSchema = ByNWeekdayResponse$outboundSchema;
+  /** @deprecated use `ByNWeekdayResponse$Outbound` instead. */
+  export type Outbound = ByNWeekdayResponse$Outbound;
+}
+
+export function byNWeekdayResponseToJSON(
+  byNWeekdayResponse: ByNWeekdayResponse,
+): string {
+  return JSON.stringify(
+    ByNWeekdayResponse$outboundSchema.parse(byNWeekdayResponse),
+  );
+}
+
+export function byNWeekdayResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ByNWeekdayResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ByNWeekdayResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ByNWeekdayResponse' from JSON`,
+  );
 }

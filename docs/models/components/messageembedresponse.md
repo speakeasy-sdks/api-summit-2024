@@ -6,7 +6,7 @@
 import { MessageEmbedResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageEmbedResponse = {
-    type: "<value>",
+  type: "<value>",
 };
 ```
 

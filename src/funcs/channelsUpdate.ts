@@ -3,18 +3,19 @@
  */
 
 import { DiscordCore } from "../core.js";
-import { encodeJSON as encodeJSON$, encodeSimple as encodeSimple$ } from "../lib/encodings.js";
-import * as m$ from "../lib/matchers.js";
-import * as schemas$ from "../lib/schemas.js";
+import { encodeJSON, encodeSimple } from "../lib/encodings.js";
+import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
+import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
 import {
-    ConnectionError,
-    InvalidRequestError,
-    RequestAbortedError,
-    RequestTimeoutError,
-    UnexpectedClientError,
+  ConnectionError,
+  InvalidRequestError,
+  RequestAbortedError,
+  RequestTimeoutError,
+  UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
 import * as errors from "../models/errors/index.js";
 import { SDKError } from "../models/errors/sdkerror.js";
@@ -23,108 +24,111 @@ import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
 export async function channelsUpdate(
-    client$: DiscordCore,
-    request: operations.UpdateChannelRequest,
-    options?: RequestOptions
+  client: DiscordCore,
+  request: operations.UpdateChannelRequest,
+  options?: RequestOptions,
 ): Promise<
-    Result<
-        operations.UpdateChannelResponseBody,
-        | errors.ErrorResponse
-        | SDKError
-        | SDKValidationError
-        | UnexpectedClientError
-        | InvalidRequestError
-        | RequestAbortedError
-        | RequestTimeoutError
-        | ConnectionError
-    >
+  Result<
+    operations.UpdateChannelResponseBody,
+    | errors.ErrorResponse
+    | SDKError
+    | SDKValidationError
+    | UnexpectedClientError
+    | InvalidRequestError
+    | RequestAbortedError
+    | RequestTimeoutError
+    | ConnectionError
+  >
 > {
-    const input$ = request;
+  const parsed = safeParse(
+    request,
+    (value) => operations.UpdateChannelRequest$outboundSchema.parse(value),
+    "Input validation failed",
+  );
+  if (!parsed.ok) {
+    return parsed;
+  }
+  const payload = parsed.value;
+  const body = encodeJSON("body", payload.RequestBody, { explode: true });
 
-    const parsed$ = schemas$.safeParse(
-        input$,
-        (value$) => operations.UpdateChannelRequest$outboundSchema.parse(value$),
-        "Input validation failed"
-    );
-    if (!parsed$.ok) {
-        return parsed$;
-    }
-    const payload$ = parsed$.value;
-    const body$ = encodeJSON$("body", payload$.RequestBody, { explode: true });
+  const pathParams = {
+    channel_id: encodeSimple("channel_id", payload.channel_id, {
+      explode: false,
+      charEncoding: "percent",
+    }),
+  };
 
-    const pathParams$ = {
-        channel_id: encodeSimple$("channel_id", payload$.channel_id, {
-            explode: false,
-            charEncoding: "percent",
-        }),
-    };
+  const path = pathToFunc("/channels/{channel_id}")(pathParams);
 
-    const path$ = pathToFunc("/channels/{channel_id}")(pathParams$);
+  const headers = new Headers(compactMap({
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  }));
 
-    const headers$ = new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-    });
+  const secConfig = await extractSecurity(client._options.botToken);
+  const securityInput = secConfig == null ? {} : { botToken: secConfig };
+  const requestSecurity = resolveGlobalSecurity(securityInput);
 
-    const botToken$ = await extractSecurity(client$.options$.botToken);
-    const security$ = botToken$ == null ? {} : { botToken: botToken$ };
-    const context = {
-        operationID: "update_channel",
-        oAuth2Scopes: [],
-        securitySource: client$.options$.botToken,
-    };
-    const securitySettings$ = resolveGlobalSecurity(security$);
+  const context = {
+    operationID: "update_channel",
+    oAuth2Scopes: [],
 
-    const requestRes = client$.createRequest$(
-        context,
-        {
-            security: securitySettings$,
-            method: "PATCH",
-            path: path$,
-            headers: headers$,
-            body: body$,
-            timeoutMs: options?.timeoutMs || client$.options$.timeoutMs || -1,
-        },
-        options
-    );
-    if (!requestRes.ok) {
-        return requestRes;
-    }
-    const request$ = requestRes.value;
+    resolvedSecurity: requestSecurity,
 
-    const doResult = await client$.do$(request$, {
-        context,
-        errorCodes: ["4XX", "5XX"],
-        retryConfig: options?.retries || client$.options$.retryConfig,
-        retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
-    });
-    if (!doResult.ok) {
-        return doResult;
-    }
-    const response = doResult.value;
+    securitySource: client._options.botToken,
+    retryConfig: options?.retries
+      || client._options.retryConfig
+      || { strategy: "none" },
+    retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
+  };
 
-    const responseFields$ = {
-        HttpMeta: { Response: response, Request: request$ },
-    };
+  const requestRes = client._createRequest(context, {
+    security: requestSecurity,
+    method: "PATCH",
+    baseURL: options?.serverURL,
+    path: path,
+    headers: headers,
+    body: body,
+    timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
+  }, options);
+  if (!requestRes.ok) {
+    return requestRes;
+  }
+  const req = requestRes.value;
 
-    const [result$] = await m$.match<
-        operations.UpdateChannelResponseBody,
-        | errors.ErrorResponse
-        | SDKError
-        | SDKValidationError
-        | UnexpectedClientError
-        | InvalidRequestError
-        | RequestAbortedError
-        | RequestTimeoutError
-        | ConnectionError
-    >(
-        m$.json(200, operations.UpdateChannelResponseBody$inboundSchema),
-        m$.jsonErr("4XX", errors.ErrorResponse$inboundSchema),
-        m$.fail("5XX")
-    )(response, { extraFields: responseFields$ });
-    if (!result$.ok) {
-        return result$;
-    }
+  const doResult = await client._do(req, {
+    context,
+    errorCodes: ["4XX", "5XX"],
+    retryConfig: context.retryConfig,
+    retryCodes: context.retryCodes,
+  });
+  if (!doResult.ok) {
+    return doResult;
+  }
+  const response = doResult.value;
 
-    return result$;
+  const responseFields = {
+    HttpMeta: { Response: response, Request: req },
+  };
+
+  const [result] = await M.match<
+    operations.UpdateChannelResponseBody,
+    | errors.ErrorResponse
+    | SDKError
+    | SDKValidationError
+    | UnexpectedClientError
+    | InvalidRequestError
+    | RequestAbortedError
+    | RequestTimeoutError
+    | ConnectionError
+  >(
+    M.json(200, operations.UpdateChannelResponseBody$inboundSchema),
+    M.jsonErr("4XX", errors.ErrorResponse$inboundSchema),
+    M.fail("5XX"),
+  )(response, { extraFields: responseFields });
+  if (!result.ok) {
+    return result;
+  }
+
+  return result;
 }

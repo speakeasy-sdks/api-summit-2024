@@ -3,36 +3,39 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type ChannelSelectDefaultValue = {
-    type?: "user" | undefined;
-    id: string;
+  type?: "user" | undefined;
+  id: string;
 };
 
 /** @internal */
 export const ChannelSelectDefaultValue$inboundSchema: z.ZodType<
-    ChannelSelectDefaultValue,
-    z.ZodTypeDef,
-    unknown
+  ChannelSelectDefaultValue,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    type: z.literal("user").optional(),
-    id: z.string(),
+  type: z.literal("user").optional(),
+  id: z.string(),
 });
 
 /** @internal */
 export type ChannelSelectDefaultValue$Outbound = {
-    type: "user";
-    id: string;
+  type: "user";
+  id: string;
 };
 
 /** @internal */
 export const ChannelSelectDefaultValue$outboundSchema: z.ZodType<
-    ChannelSelectDefaultValue$Outbound,
-    z.ZodTypeDef,
-    ChannelSelectDefaultValue
+  ChannelSelectDefaultValue$Outbound,
+  z.ZodTypeDef,
+  ChannelSelectDefaultValue
 > = z.object({
-    type: z.literal("user").default("user" as const),
-    id: z.string(),
+  type: z.literal("user").default("user" as const),
+  id: z.string(),
 });
 
 /**
@@ -40,10 +43,28 @@ export const ChannelSelectDefaultValue$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace ChannelSelectDefaultValue$ {
-    /** @deprecated use `ChannelSelectDefaultValue$inboundSchema` instead. */
-    export const inboundSchema = ChannelSelectDefaultValue$inboundSchema;
-    /** @deprecated use `ChannelSelectDefaultValue$outboundSchema` instead. */
-    export const outboundSchema = ChannelSelectDefaultValue$outboundSchema;
-    /** @deprecated use `ChannelSelectDefaultValue$Outbound` instead. */
-    export type Outbound = ChannelSelectDefaultValue$Outbound;
+  /** @deprecated use `ChannelSelectDefaultValue$inboundSchema` instead. */
+  export const inboundSchema = ChannelSelectDefaultValue$inboundSchema;
+  /** @deprecated use `ChannelSelectDefaultValue$outboundSchema` instead. */
+  export const outboundSchema = ChannelSelectDefaultValue$outboundSchema;
+  /** @deprecated use `ChannelSelectDefaultValue$Outbound` instead. */
+  export type Outbound = ChannelSelectDefaultValue$Outbound;
+}
+
+export function channelSelectDefaultValueToJSON(
+  channelSelectDefaultValue: ChannelSelectDefaultValue,
+): string {
+  return JSON.stringify(
+    ChannelSelectDefaultValue$outboundSchema.parse(channelSelectDefaultValue),
+  );
+}
+
+export function channelSelectDefaultValueFromJSON(
+  jsonString: string,
+): SafeParseResult<ChannelSelectDefaultValue, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ChannelSelectDefaultValue$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ChannelSelectDefaultValue' from JSON`,
+  );
 }

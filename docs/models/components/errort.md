@@ -8,8 +8,8 @@ A single error, either for an API response or a specific field.
 import { ErrorT } from "@speakeasy-sdks/discord/models/components";
 
 let value: ErrorT = {
-    code: 509624,
-    message: "<value>",
+  code: 373813,
+  message: "<value>",
 };
 ```
 

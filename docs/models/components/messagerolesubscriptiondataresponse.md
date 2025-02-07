@@ -6,10 +6,10 @@
 import { MessageRoleSubscriptionDataResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageRoleSubscriptionDataResponse = {
-    roleSubscriptionListingId: "<value>",
-    tierName: "<value>",
-    totalMonthsSubscribed: 639921,
-    isRenewal: false,
+  roleSubscriptionListingId: "<value>",
+  tierName: "<value>",
+  totalMonthsSubscribed: 318569,
+  isRenewal: false,
 };
 ```
 

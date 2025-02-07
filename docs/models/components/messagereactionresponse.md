@@ -6,15 +6,17 @@
 import { MessageReactionResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageReactionResponse = {
-    emoji: {},
-    count: 622846,
-    countDetails: {
-        burst: 837945,
-        normal: 673660,
-    },
-    burstColors: ["<value>"],
-    meBurst: false,
-    me: false,
+  emoji: {},
+  count: 181151,
+  countDetails: {
+    burst: 788546,
+    normal: 56848,
+  },
+  burstColors: [
+    "<value>",
+  ],
+  meBurst: false,
+  me: false,
 };
 ```
 

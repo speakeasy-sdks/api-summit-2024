@@ -6,8 +6,8 @@
 import { MessageComponentMentionableSelectResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: MessageComponentMentionableSelectResponse = {
-    id: 244425,
-    customId: "<value>",
+  id: 396060,
+  customId: "<id>",
 };
 ```
 

@@ -6,7 +6,7 @@
 import { Security } from "@speakeasy-sdks/discord/models/components";
 
 let value: Security = {
-    botToken: "<value>",
+  botToken: "<value>",
 };
 ```
 

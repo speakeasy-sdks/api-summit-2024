@@ -1,24 +1,17 @@
 # Nonce
 
-## Example Usage
-
-```typescript
-import { Nonce } from "@speakeasy-sdks/discord/models/components";
-
-let value: Nonce = "<value>";
-```
 
 ## Supported Types
 
 ### `number`
 
 ```typescript
-const value: number = /* values here */
+const value: number = 383441;
 ```
 
 ### `string`
 
 ```typescript
-const value: string = /* values here */
+const value: string = "<value>";
 ```
 

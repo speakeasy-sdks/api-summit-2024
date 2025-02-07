@@ -6,7 +6,7 @@
 import { CreateTextThreadWithoutMessageRequest } from "@speakeasy-sdks/discord/models/components";
 
 let value: CreateTextThreadWithoutMessageRequest = {
-    name: "<value>",
+  name: "<value>",
 };
 ```
 

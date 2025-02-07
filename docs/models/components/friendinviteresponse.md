@@ -6,7 +6,7 @@
 import { FriendInviteResponse } from "@speakeasy-sdks/discord/models/components";
 
 let value: FriendInviteResponse = {
-    code: "<value>",
+  code: "<value>",
 };
 ```
 

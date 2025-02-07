@@ -6,13 +6,13 @@
 import { StringSelect } from "@speakeasy-sdks/discord/models/components";
 
 let value: StringSelect = {
-    customId: "<value>",
-    options: [
-        {
-            label: "<value>",
-            value: "<value>",
-        },
-    ],
+  customId: "<id>",
+  options: [
+    {
+      label: "<value>",
+      value: "<value>",
+    },
+  ],
 };
 ```
 
